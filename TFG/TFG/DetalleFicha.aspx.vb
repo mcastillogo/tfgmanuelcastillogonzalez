@@ -338,16 +338,18 @@ Partial Public Class DetalleFicha
                 Dim Texto As String
                 Texto = source.Items(e.Item.ItemIndex).Cells(9).Text()
                 If Texto <> "" Then
+
                     Dim path As String = Server.MapPath("~\Documentacion\")
                     Dim camino As String = path & Texto
 
                     Try
-                        Process.Start("IExplore", camino)
+                        System.Diagnostics.Process.Start("IExplore", camino)
                     Catch ex As Exception
                         Console.WriteLine(ex.Message)
                         MensajeError.Text = "No se encuentra el fichero o este no se puede abrir con el navegador"
                     End Try
-
+                Else
+                    MensajeError.Text = " No se ha recuperado la información del fichero"
                 End If
             End If
         End If
@@ -411,19 +413,20 @@ Partial Public Class DetalleFicha
                 Valores(i) = source.Items(e.Item.ItemIndex).Cells(i + 2).Text()
                 TextoValor = TextoValor & " " & source.Items(e.Item.ItemIndex).Cells(i + 2).Text()
             Next
-
-            If MsgBox("¿Desea Eliminar definitivamente el registro? " & TextoCampo & "=" & TextoValor, MsgBoxStyle.YesNo Or MsgBoxStyle.Critical Or MsgBoxStyle.ApplicationModal, "Mensaje de Confirmacion") = 6 Then
-                Borra(Campos, Valores, Session("XDetalle"))
-                If source.id = "Datos_Documentacion" Then
-                    Dim Texto As String
-                    Texto = source.Items(e.Item.ItemIndex).Cells(9).Text()
-                    If Texto <> "" Then
-                        Dim path As String = Server.MapPath("~\Documentacion\")
-                        Dim camino As String = path & Texto
-                        My.Computer.FileSystem.DeleteFile(camino)
-                    End If
+            'Se quita msgbox ya que desde el servidor no va, no se despliega el mensaje en el cliente
+            'el problema es que tiene que haber aceptación con lo que un alert tampoco valdría.
+            'If MsgBox("¿Desea Eliminar definitivamente el registro? " & TextoCampo & "=" & TextoValor, MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
+            Borra(Campos, Valores, Session("XDetalle"))
+            If source.id = "Datos_Documentacion" Then
+                Dim Texto As String
+                Texto = source.Items(e.Item.ItemIndex).Cells(9).Text()
+                If Texto <> "" Then
+                    Dim path As String = Server.MapPath("~\Documentacion\")
+                    Dim camino As String = path & Texto
+                    My.Computer.FileSystem.DeleteFile(camino)
                 End If
             End If
+            'End If
 
 
         Catch ex As Exception

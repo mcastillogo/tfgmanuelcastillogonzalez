@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GESTOR_ACTIVOSDataSet" targetNamespace="http://tempuri.org/GESTOR_ACTIVOSDataSet.xsd" xmlns:mstns="http://tempuri.org/GESTOR_ACTIVOSDataSet.xsd" xmlns="http://tempuri.org/GESTOR_ACTIVOSDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="GESTOR_ACTIVOSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GESTOR_ACTIVOSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.GESTOR_ACTIVOSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Seleccion_Elementos_NewTableAdapter" GeneratorDataComponentClassName="Seleccion_Elementos_NewTableAdapter" Name="Seleccion_Elementos_New" UserDataComponentName="Seleccion_Elementos_NewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GESTOR_ACTIVOSConnectionString (Web.config)" DbObjectName="GESTOR_ACTIVOS.dbo.Seleccion_Elementos_New" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM Seleccion_Elementos_New</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TIPO_ELEMENTO" DataSetColumn="TIPO_ELEMENTO" />
+              <Mapping SourceColumn="CENTRO" DataSetColumn="CENTRO" />
+              <Mapping SourceColumn="UBICACION" DataSetColumn="UBICACION" />
+              <Mapping SourceColumn="COD_POSTAL" DataSetColumn="COD_POSTAL" />
+              <Mapping SourceColumn="TIPO_LOCALIDAD" DataSetColumn="TIPO_LOCALIDAD" />
+              <Mapping SourceColumn="TIPO_PROVINCIA" DataSetColumn="TIPO_PROVINCIA" />
+              <Mapping SourceColumn="TITULO_PROPIEDAD" DataSetColumn="TITULO_PROPIEDAD" />
+              <Mapping SourceColumn="PROTOCOLO" DataSetColumn="PROTOCOLO" />
+              <Mapping SourceColumn="COPIA_TITULO" DataSetColumn="COPIA_TITULO" />
+              <Mapping SourceColumn="TIPO_REGISTRO" DataSetColumn="TIPO_REGISTRO" />
+              <Mapping SourceColumn="CTIPO_PROVINCIA" DataSetColumn="CTIPO_PROVINCIA" />
+              <Mapping SourceColumn="NUM_FINCA" DataSetColumn="NUM_FINCA" />
+              <Mapping SourceColumn="TIPO_CERTIFICACION" DataSetColumn="TIPO_CERTIFICACION" />
+              <Mapping SourceColumn="REF_CATASTRAL" DataSetColumn="REF_CATASTRAL" />
+              <Mapping SourceColumn="IBI" DataSetColumn="IBI" />
+              <Mapping SourceColumn="DESCRIPCION_CORTA" DataSetColumn="DESCRIPCION_CORTA" />
+              <Mapping SourceColumn="DESCRIPCION_LARGA" DataSetColumn="DESCRIPCION_LARGA" />
+              <Mapping SourceColumn="OBSERVACIONES_GENERALES" DataSetColumn="OBSERVACIONES_GENERALES" />
+              <Mapping SourceColumn="CODIGO_NOTARIO" DataSetColumn="CODIGO_NOTARIO" />
+              <Mapping SourceColumn="USUARIO" DataSetColumn="USUARIO" />
+              <Mapping SourceColumn="TIPO_GRUPO_INTERNO" DataSetColumn="TIPO_GRUPO_INTERNO" />
+              <Mapping SourceColumn="TIPO_GRUPO_SOCIEDAD" DataSetColumn="TIPO_GRUPO_SOCIEDAD" />
+              <Mapping SourceColumn="SOCIEDAD" DataSetColumn="SOCIEDAD" />
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="DESC_PROVINCIA_2" DataSetColumn="DESC_PROVINCIA_2" />
+              <Mapping SourceColumn="DESC_CENTRO" DataSetColumn="DESC_CENTRO" />
+              <Mapping SourceColumn="DESC_LOCALIDAD" DataSetColumn="DESC_LOCALIDAD" />
+              <Mapping SourceColumn="DESC_TIPO_REGISTRO" DataSetColumn="DESC_TIPO_REGISTRO" />
+              <Mapping SourceColumn="APELLIDO_1_NOTARIO" DataSetColumn="APELLIDO_1_NOTARIO" />
+              <Mapping SourceColumn="APELLIDO_2_NOTARIO" DataSetColumn="APELLIDO_2_NOTARIO" />
+              <Mapping SourceColumn="NOMBRE_NOTARIO" DataSetColumn="NOMBRE_NOTARIO" />
+              <Mapping SourceColumn="DESC_TIPO_CERTIFICACION" DataSetColumn="DESC_TIPO_CERTIFICACION" />
+              <Mapping SourceColumn="DESC_TIPO_ELEMENTO" DataSetColumn="DESC_TIPO_ELEMENTO" />
+              <Mapping SourceColumn="DESCRIPCION" DataSetColumn="DESCRIPCION" />
+              <Mapping SourceColumn="DESC_TIPO_PROVINCIA_4" DataSetColumn="DESC_TIPO_PROVINCIA_4" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GESTOR_ACTIVOSDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GESTOR_ACTIVOSDataSet" msprop:Generator_UserDSName="GESTOR_ACTIVOSDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Seleccion_Elementos_New" msprop:Generator_TableClassName="Seleccion_Elementos_NewDataTable" msprop:Generator_TableVarName="tableSeleccion_Elementos_New" msprop:Generator_TablePropName="Seleccion_Elementos_New" msprop:Generator_RowDeletingName="Seleccion_Elementos_NewRowDeleting" msprop:Generator_RowChangingName="Seleccion_Elementos_NewRowChanging" msprop:Generator_RowEvHandlerName="Seleccion_Elementos_NewRowChangeEventHandler" msprop:Generator_RowDeletedName="Seleccion_Elementos_NewRowDeleted" msprop:Generator_UserTableName="Seleccion_Elementos_New" msprop:Generator_RowChangedName="Seleccion_Elementos_NewRowChanged" msprop:Generator_RowEvArgName="Seleccion_Elementos_NewRowChangeEvent" msprop:Generator_RowClassName="Seleccion_Elementos_NewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPO_ELEMENTO" msprop:Generator_ColumnVarNameInTable="columnTIPO_ELEMENTO" msprop:Generator_ColumnPropNameInRow="TIPO_ELEMENTO" msprop:Generator_ColumnPropNameInTable="TIPO_ELEMENTOColumn" msprop:Generator_UserColumnName="TIPO_ELEMENTO" type="xs:short" />
+              <xs:element name="CENTRO" msprop:Generator_ColumnVarNameInTable="columnCENTRO" msprop:Generator_ColumnPropNameInRow="CENTRO" msprop:Generator_ColumnPropNameInTable="CENTROColumn" msprop:Generator_UserColumnName="CENTRO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UBICACION" msprop:Generator_ColumnVarNameInTable="columnUBICACION" msprop:Generator_ColumnPropNameInRow="UBICACION" msprop:Generator_ColumnPropNameInTable="UBICACIONColumn" msprop:Generator_UserColumnName="UBICACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COD_POSTAL" msprop:Generator_ColumnVarNameInTable="columnCOD_POSTAL" msprop:Generator_ColumnPropNameInRow="COD_POSTAL" msprop:Generator_ColumnPropNameInTable="COD_POSTALColumn" msprop:Generator_UserColumnName="COD_POSTAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_LOCALIDAD" msprop:Generator_ColumnVarNameInTable="columnTIPO_LOCALIDAD" msprop:Generator_ColumnPropNameInRow="TIPO_LOCALIDAD" msprop:Generator_ColumnPropNameInTable="TIPO_LOCALIDADColumn" msprop:Generator_UserColumnName="TIPO_LOCALIDAD" type="xs:short" />
+              <xs:element name="TIPO_PROVINCIA" msprop:Generator_ColumnVarNameInTable="columnTIPO_PROVINCIA" msprop:Generator_ColumnPropNameInRow="TIPO_PROVINCIA" msprop:Generator_ColumnPropNameInTable="TIPO_PROVINCIAColumn" msprop:Generator_UserColumnName="TIPO_PROVINCIA" type="xs:short" />
+              <xs:element name="TITULO_PROPIEDAD" msprop:Generator_ColumnVarNameInTable="columnTITULO_PROPIEDAD" msprop:Generator_ColumnPropNameInRow="TITULO_PROPIEDAD" msprop:Generator_ColumnPropNameInTable="TITULO_PROPIEDADColumn" msprop:Generator_UserColumnName="TITULO_PROPIEDAD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROTOCOLO" msprop:Generator_ColumnVarNameInTable="columnPROTOCOLO" msprop:Generator_ColumnPropNameInRow="PROTOCOLO" msprop:Generator_ColumnPropNameInTable="PROTOCOLOColumn" msprop:Generator_UserColumnName="PROTOCOLO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COPIA_TITULO" msprop:Generator_ColumnVarNameInTable="columnCOPIA_TITULO" msprop:Generator_ColumnPropNameInRow="COPIA_TITULO" msprop:Generator_ColumnPropNameInTable="COPIA_TITULOColumn" msprop:Generator_UserColumnName="COPIA_TITULO" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TIPO_REGISTRO" msprop:Generator_ColumnVarNameInTable="columnTIPO_REGISTRO" msprop:Generator_ColumnPropNameInRow="TIPO_REGISTRO" msprop:Generator_ColumnPropNameInTable="TIPO_REGISTROColumn" msprop:Generator_UserColumnName="TIPO_REGISTRO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CTIPO_PROVINCIA" msprop:Generator_ColumnVarNameInTable="columnCTIPO_PROVINCIA" msprop:Generator_ColumnPropNameInRow="CTIPO_PROVINCIA" msprop:Generator_ColumnPropNameInTable="CTIPO_PROVINCIAColumn" msprop:Generator_UserColumnName="CTIPO_PROVINCIA" type="xs:short" />
+              <xs:element name="NUM_FINCA" msprop:Generator_ColumnVarNameInTable="columnNUM_FINCA" msprop:Generator_ColumnPropNameInRow="NUM_FINCA" msprop:Generator_ColumnPropNameInTable="NUM_FINCAColumn" msprop:Generator_UserColumnName="NUM_FINCA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_CERTIFICACION" msprop:Generator_ColumnVarNameInTable="columnTIPO_CERTIFICACION" msprop:Generator_ColumnPropNameInRow="TIPO_CERTIFICACION" msprop:Generator_ColumnPropNameInTable="TIPO_CERTIFICACIONColumn" msprop:Generator_UserColumnName="TIPO_CERTIFICACION" type="xs:short" />
+              <xs:element name="REF_CATASTRAL" msprop:Generator_ColumnVarNameInTable="columnREF_CATASTRAL" msprop:Generator_ColumnPropNameInRow="REF_CATASTRAL" msprop:Generator_ColumnPropNameInTable="REF_CATASTRALColumn" msprop:Generator_UserColumnName="REF_CATASTRAL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IBI" msprop:Generator_ColumnVarNameInTable="columnIBI" msprop:Generator_ColumnPropNameInRow="IBI" msprop:Generator_ColumnPropNameInTable="IBIColumn" msprop:Generator_UserColumnName="IBI" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DESCRIPCION_CORTA" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION_CORTA" msprop:Generator_ColumnPropNameInRow="DESCRIPCION_CORTA" msprop:Generator_ColumnPropNameInTable="DESCRIPCION_CORTAColumn" msprop:Generator_UserColumnName="DESCRIPCION_CORTA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPCION_LARGA" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION_LARGA" msprop:Generator_ColumnPropNameInRow="DESCRIPCION_LARGA" msprop:Generator_ColumnPropNameInTable="DESCRIPCION_LARGAColumn" msprop:Generator_UserColumnName="DESCRIPCION_LARGA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OBSERVACIONES_GENERALES" msprop:Generator_ColumnVarNameInTable="columnOBSERVACIONES_GENERALES" msprop:Generator_ColumnPropNameInRow="OBSERVACIONES_GENERALES" msprop:Generator_ColumnPropNameInTable="OBSERVACIONES_GENERALESColumn" msprop:Generator_UserColumnName="OBSERVACIONES_GENERALES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGO_NOTARIO" msprop:Generator_ColumnVarNameInTable="columnCODIGO_NOTARIO" msprop:Generator_ColumnPropNameInRow="CODIGO_NOTARIO" msprop:Generator_ColumnPropNameInTable="CODIGO_NOTARIOColumn" msprop:Generator_UserColumnName="CODIGO_NOTARIO" type="xs:short" minOccurs="0" />
+              <xs:element name="USUARIO" msprop:Generator_ColumnVarNameInTable="columnUSUARIO" msprop:Generator_ColumnPropNameInRow="USUARIO" msprop:Generator_ColumnPropNameInTable="USUARIOColumn" msprop:Generator_UserColumnName="USUARIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_GRUPO_INTERNO" msprop:Generator_ColumnVarNameInTable="columnTIPO_GRUPO_INTERNO" msprop:Generator_ColumnPropNameInRow="TIPO_GRUPO_INTERNO" msprop:Generator_ColumnPropNameInTable="TIPO_GRUPO_INTERNOColumn" msprop:Generator_UserColumnName="TIPO_GRUPO_INTERNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_GRUPO_SOCIEDAD" msprop:Generator_ColumnVarNameInTable="columnTIPO_GRUPO_SOCIEDAD" msprop:Generator_ColumnPropNameInRow="TIPO_GRUPO_SOCIEDAD" msprop:Generator_ColumnPropNameInTable="TIPO_GRUPO_SOCIEDADColumn" msprop:Generator_UserColumnName="TIPO_GRUPO_SOCIEDAD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOCIEDAD" msprop:Generator_ColumnVarNameInTable="columnSOCIEDAD" msprop:Generator_ColumnPropNameInRow="SOCIEDAD" msprop:Generator_ColumnPropNameInTable="SOCIEDADColumn" msprop:Generator_UserColumnName="SOCIEDAD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" msprop:Generator_UserColumnName="CODIGO" type="xs:short" />
+              <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" />
+              <xs:element name="DESC_PROVINCIA_2" msprop:Generator_ColumnVarNameInTable="columnDESC_PROVINCIA_2" msprop:Generator_ColumnPropNameInRow="DESC_PROVINCIA_2" msprop:Generator_ColumnPropNameInTable="DESC_PROVINCIA_2Column" msprop:Generator_UserColumnName="DESC_PROVINCIA_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESC_CENTRO" msprop:Generator_ColumnVarNameInTable="columnDESC_CENTRO" msprop:Generator_ColumnPropNameInRow="DESC_CENTRO" msprop:Generator_ColumnPropNameInTable="DESC_CENTROColumn" msprop:Generator_UserColumnName="DESC_CENTRO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESC_LOCALIDAD" msprop:Generator_ColumnVarNameInTable="columnDESC_LOCALIDAD" msprop:Generator_ColumnPropNameInRow="DESC_LOCALIDAD" msprop:Generator_ColumnPropNameInTable="DESC_LOCALIDADColumn" msprop:Generator_UserColumnName="DESC_LOCALIDAD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESC_TIPO_REGISTRO" msprop:Generator_ColumnVarNameInTable="columnDESC_TIPO_REGISTRO" msprop:Generator_ColumnPropNameInRow="DESC_TIPO_REGISTRO" msprop:Generator_ColumnPropNameInTable="DESC_TIPO_REGISTROColumn" msprop:Generator_UserColumnName="DESC_TIPO_REGISTRO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="APELLIDO_1_NOTARIO" msprop:Generator_ColumnVarNameInTable="columnAPELLIDO_1_NOTARIO" msprop:Generator_ColumnPropNameInRow="APELLIDO_1_NOTARIO" msprop:Generator_ColumnPropNameInTable="APELLIDO_1_NOTARIOColumn" msprop:Generator_UserColumnName="APELLIDO_1_NOTARIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="APELLIDO_2_NOTARIO" msprop:Generator_ColumnVarNameInTable="columnAPELLIDO_2_NOTARIO" msprop:Generator_ColumnPropNameInRow="APELLIDO_2_NOTARIO" msprop:Generator_ColumnPropNameInTable="APELLIDO_2_NOTARIOColumn" msprop:Generator_UserColumnName="APELLIDO_2_NOTARIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOMBRE_NOTARIO" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_NOTARIO" msprop:Generator_ColumnPropNameInRow="NOMBRE_NOTARIO" msprop:Generator_ColumnPropNameInTable="NOMBRE_NOTARIOColumn" msprop:Generator_UserColumnName="NOMBRE_NOTARIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESC_TIPO_CERTIFICACION" msprop:Generator_ColumnVarNameInTable="columnDESC_TIPO_CERTIFICACION" msprop:Generator_ColumnPropNameInRow="DESC_TIPO_CERTIFICACION" msprop:Generator_ColumnPropNameInTable="DESC_TIPO_CERTIFICACIONColumn" msprop:Generator_UserColumnName="DESC_TIPO_CERTIFICACION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESC_TIPO_ELEMENTO" msprop:Generator_ColumnVarNameInTable="columnDESC_TIPO_ELEMENTO" msprop:Generator_ColumnPropNameInRow="DESC_TIPO_ELEMENTO" msprop:Generator_ColumnPropNameInTable="DESC_TIPO_ELEMENTOColumn" msprop:Generator_UserColumnName="DESC_TIPO_ELEMENTO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_UserColumnName="DESCRIPCION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESC_TIPO_PROVINCIA_4" msprop:Generator_ColumnVarNameInTable="columnDESC_TIPO_PROVINCIA_4" msprop:Generator_ColumnPropNameInRow="DESC_TIPO_PROVINCIA_4" msprop:Generator_ColumnPropNameInTable="DESC_TIPO_PROVINCIA_4Column" msprop:Generator_UserColumnName="DESC_TIPO_PROVINCIA_4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

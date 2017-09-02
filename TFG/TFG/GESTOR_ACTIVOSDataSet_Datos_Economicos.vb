@@ -1,0 +1,2 @@
+﻿Partial Class GESTOR_ACTIVOSDataSet_Datos_Economicos
+End Class

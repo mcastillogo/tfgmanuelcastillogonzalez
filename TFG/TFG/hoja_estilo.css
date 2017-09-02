@@ -1,0 +1,204 @@
+﻿
+
+
+html{
+    /* background, color de fondo un morado 
+	   padding , separacion entre elementos  de 15 pixels 
+	   Width, ancho de la hoja html de 1100px
+	   Height,alto de 300 pixels
+	   font-family, fuente para el html "Times New Roman"*/
+    background: #9f0ff7;
+    padding: 15px; 
+    width: 1100px;
+	height: 300px;
+    font-family: "Times New Roman", Times, Sansserif;
+
+} 
+
+h1{
+	/* Para todas las etiquetas tipo H1 se desplaza el texto 2 pixels en vertical 
+	   y con un color blanco */
+    text-shadow: 0px 2px;
+	color : white;
+}
+
+tr{
+	/* Para las cabeceras de las tablas, se alinean a la izquierda y con color blanco */
+    text-align: left;
+	color : white;
+	height: 10 px;
+}
+
+
+
+label{
+    /* Siempre que sea de aplicación para todas las etiquetas label ancho a 200 px y color azul oscuro */
+    width: 200px;
+    color : navy;
+}
+
+article {
+    /* Para todas las etiquetas tipo article ancho 1000px, separación entre elementos de  25px 
+	   recuadro de 15 px con color sólido azul oscuro 
+	   margen de 25 px y altura de 420 px */
+    width: 1000px;
+    padding: 25px;
+    border: 15px solid navy;
+    margin: 25px;
+	height: 420px;
+}
+
+input{
+	/* En todas las entradas los bordes redondeados a 25 px, con un factor de transparencia alfa en el color de 0.5 sobre
+	   rgb (red green blue)
+	   color del texto de la caja blanco*/
+	border-radius: 25px;
+	background: rgba(0, 0, 0, 0.5);
+	color: white
+}
+
+
+html, body{
+  /*parámetros sobre el documento html y body cuerpo para justificar la presentación del documento en el navegador */
+  width:  100%;
+  height: 100%;
+  margin: 0px;
+}
+
+p{
+    /*Para todos los párrafos si aplica, border-radius a 25 px, color #8AC009
+	  separación entre elementos 20 px, ancho 200 px, alto 30 px y tipo fuente la indicada */
+    border-radius: 25px;
+    background: #8AC009;
+    padding: 10px; 
+    width: 200px;
+    height: 20px;  
+    font-family: "Times New Roman", Times, serif;	
+} 
+
+
+.titulo{
+    /*Personalización para la clase titulo separación entre elementos 20px y tipo fuente Arial */
+    padding: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.fieldboxNombre,.fieldboxPie{
+	/*Personalización para la clase campo pie y campo nombre transformar el texto de minúsculas a mayúsculas UPPERCASE */
+	text-transform : uppercase
+}
+
+
+button{
+    /*Para todos los botones color de fondo tipo letra y redondeo */
+	background: #8AC009;
+	font-family: "Times New Roman", Times, Sansserif;
+	border-radius: 10px 20px;
+	padding: 10px;
+}
+
+
+.textMal{
+    background: rgba(255, 0, 0, 0.5);
+}
+
+
+.textBien{
+    background: rgba(0, 255, 0, 0.5);
+}
+
+body{
+
+}
+
+
+/*A la etiqueta NAV le damos borde redondeado con un radio de 10px ,
+ degradado de blanco a gris, padding de 10px y un ancho de 950px.*/
+nav{
+    /*Bordes redondeados*/
+    -webkit-border-radius:10px;/*Para chrome y Safari*/
+    -moz-border-radius:10px;/*Para Firefox*/
+    -o-border-radius:10px;/*Para Opera*/
+    border-radius:10px;/*El estandar por defecto*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#CCC));/*Para chrome y Safari*/
+    /*Degradados*/
+    background-image: -moz-linear-gradient(top center, #FFF, #CCC);/*Para Firefox*/
+    background-image: -o-linear-gradient(top, #FFF, #CCC);/*Para Opera*/
+    background-image: linear-gradient(top, #FFF, #CCC);/*El estandar por defecto*/
+    overflow:hidden;
+    padding:10px;
+    width:950px;
+}
+
+/*Recordemos que NAV es un  contenedor para la lista, así que ahora pasamos a dar estilo a  la etiqueta de  
+UL que contiene las listas, vamos a anular el 
+estilo de lista, darle márgenes laterales de 10px y anular el padding.*/
+nav ul{
+    list-style:none;
+    margin:0 10px 0 10px;
+    padding:0;
+}
+
+/*Ahora  a los elementos de la lista LI hacemos que floten a la izquierda para una vista 
+horizontal y le damos un margen derecho de 10px para darle separación con bordes redondeados de 5px de radio, 
+tipo de fuente, tamaño de 16px, centrado y sombras para el texto.*/
+nav ul li{
+    /*Bordes redondeados*/
+    -webkit-border-radius:5px;/*Chrome y Safari*/
+    -moz-border-radius:5px;/*Firefox*/
+    -o-border-radius:5px;/*Opera*/
+    border-radius:5px;/*Estandar por defecto*/
+    float:left;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:16px;
+    font-weight:bold;
+    margin-right:10px;
+    text-align:center;
+    /*Sombras para texto, los mismos parametros que box-shadow*/
+    text-shadow: 0px 1px 0px #FFF;
+}
+
+/*Al pasar el puntero sobre el elemento LI se activara el evento HOVER cambiando 
+el fondo de este. En los degradados tenemos diferentes maneras de aplicarlo para cada navegador, 
+en este caso para el estándar por defecto, Opera y Firefox es igual, para Chrome y Safari es diferente 
+pero con las mismas propiedades. De tipo linear, empezamos por la parte alta hacia debajo de blanco a 
+gris claro, con la sombra tenemos los parámetros eje X, eje Y, enfoque y color.*/
+nav ul li:hover{
+    /*Degradado de fondo*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to( #E3E3E3));/*Chrome y Safari*/
+    background-image: -moz-linear-gradient(top center, #FFF, #E3E3E3);/*Firefox*/
+    background-image: -o-linear-gradient(top, #FFF, #E3E3E3);/*Opera*/
+    background-image: linear-gradient(top, #FFF, #E3E3E3);/*Estandar por defecto*/
+    /*Sombras*/
+    -webkit-box-shadow:  1px -1px 0px #999;/*Chrome y Safari*/
+    -moz-box-shadow:  1px -1px 0px #999;/*Firefox*/
+    -o-box-shadow:  1px -1px 0px #999;/*Opera*/
+    box-shadow:  1px -1px 0px #999;/*Estandar por defecto*/
+    border:1px solid #E3E3E3;
+}
+
+/*Cada elemento LI es también un contenedor, en este caso de enlaces, a estos enlaces 
+le daremos color gris y que sean bloques con padding de 10px, quitaremos la decoración 
+de los enlaces. Las transiciones en CSS3 tienen diferentes parámetros, esta vez utilizamos 
+el tiempo de 0.4 segundos, el efecto linear y aplicable a
+todas las propiedades básicas, ancho , color, margen, etc.*/
+nav ul li a{
+    color:#999;
+    display:block;
+    padding:10px;
+    text-decoration:none;
+    /*Transiciones*/
+    -webkit-transition: 0.4s linear all;
+    -moz-transition: 0.4s linear all;
+    -o-transition: 0.4s linear all;
+    transition: 0.4s linear all;
+}
+
+/*La transición esta vez se activara al pasar el puntero, el evento HOVER de CSS que cambiara de color gris
+ el texto a negro, esto es sobre la etiqueta A de enlace.*/
+nav ul li a:hover {
+    color:#000;
+}
+
+
+
+

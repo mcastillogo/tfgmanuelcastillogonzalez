@@ -144,9 +144,9 @@ Partial Public Class Seguridad
         Try
             Campos(0) = source.DataKeyField
             Valores(0) = source.Items(e.Item.ItemIndex).Cells(3).Text()
-            If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & "-" & Campos(1) & "=" & Valores(0) & "-" & Valores(1), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
-                Borra(Campos, Valores, 0)
-            End If
+            'If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & "-" & Campos(1) & "=" & Valores(0) & "-" & Valores(1), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
+            Borra(Campos, Valores, 0)
+            'End If
         Catch ex As Exception
             MensajeError.Text = "Error al Eliminar " & Campos(0) & " = " & Valores(0) & " - Mensaje de Error : " & ex.Message
         Finally
@@ -482,9 +482,9 @@ Partial Public Class Seguridad
             Valores(0) = source.Items(e.Item.ItemIndex).Cells(2).Text()
             Campos(1) = "TIPO_GRUPO_SOCIEDAD"
             Valores(1) = CType(e.Item.Cells(3).FindControl("DropDownlist1"), DropDownList).Text
-            If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & "-" & Campos(1) & "=" & Valores(0) & "-" & Valores(1), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
-                Borra(Campos, Valores, 1)
-            End If
+            'If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & "-" & Campos(1) & "=" & Valores(0) & "-" & Valores(1), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
+            Borra(Campos, Valores, 1)
+            'End If
         Catch ex As Exception
             MensajeError.Text = "Error al Eliminar " & Campos(0) & "-" & Campos(1) & "=" & Valores(0) & "-" & Valores(1) & " - Mensaje de Error : " & ex.Message
         Finally
@@ -591,9 +591,9 @@ Partial Public Class Seguridad
             Valores(0) = source.Items(e.Item.ItemIndex).Cells(2).Text()
             Campos(1) = "SOCIEDAD"
             Valores(1) = CType(e.Item.Cells(3).FindControl("DropDownlist1"), DropDownList).Text
-            If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & "-" & Campos(1) & "=" & Valores(0) & "-" & Valores(1), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
-                Borra(Campos, Valores, 2)
-            End If
+            'If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & "-" & Campos(1) & "=" & Valores(0) & "-" & Valores(1), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
+            Borra(Campos, Valores, 2)
+            'End If
         Catch ex As Exception
             MensajeError.Text = "Error al Eliminar " & Campos(0) & "-" & Campos(1) & "=" & Valores(0) & "-" & Valores(1) & " - Mensaje de Error : " & ex.Message
         Finally
@@ -659,9 +659,9 @@ Partial Public Class Seguridad
             Valores(0) = source.Items(e.Item.ItemIndex).Cells(2).Text()
             Campos(1) = "CENTRO"
             Valores(1) = CType(e.Item.Cells(3).FindControl("DropDownlist1"), DropDownList).Text
-            If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & "-" & Campos(1) & "=" & Valores(0) & "-" & Valores(1), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
-                Borra(Campos, Valores, 3)
-            End If
+            'If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & "-" & Campos(1) & "=" & Valores(0) & "-" & Valores(1), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
+            Borra(Campos, Valores, 3)
+            'End If
         Catch ex As Exception
             MensajeError.Text = "Error al Eliminar " & Campos(0) & "-" & Campos(1) & "=" & Valores(0) & "-" & Valores(1) & " - Mensaje de Error : " & ex.Message
         Finally

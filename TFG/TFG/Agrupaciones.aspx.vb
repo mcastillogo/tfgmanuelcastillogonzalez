@@ -532,9 +532,9 @@ Public Partial Class Agrupaciones
             Valores(0) = source.Items(e.Item.ItemIndex).Cells(2).Text()
             Campos(1) = "CENTRO"
             Valores(1) = CType(e.Item.Cells(3).FindControl("DropDownlist1"), DropDownList).Text
-            If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & " " & Campos(1) & "=" & Trim(Valores(0)) & " " & Trim(Valores(1)), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
-                Borra(Campos, Valores, 1)
-            End If
+            'If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & " " & Campos(1) & "=" & Trim(Valores(0)) & " " & Trim(Valores(1)), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
+            Borra(Campos, Valores, 1)
+            'End If
         Catch ex As Exception
             MensajeError.Text = "Error al Eliminar " & Campos(0) & " " & Campos(1) & "=" & Trim(Valores(0)) & " " & Trim(Valores(1)) & " - Mensaje de Error : " & ex.Message
         Finally
@@ -629,9 +629,9 @@ Public Partial Class Agrupaciones
             Valores(0) = source.Items(e.Item.ItemIndex).Cells(3).Text()
             Campos(1) = "CODIGO_RESPONSABLE"
             Valores(1) = CType(e.Item.Cells(3).FindControl("DropDownlist1"), DropDownList).Text
-            If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & " " & Campos(1) & "=" & Trim(Valores(0)) & " " & Trim(Valores(1)), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
-                Borra(Campos, Valores, 2)
-            End If
+            'If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & " " & Campos(1) & "=" & Trim(Valores(0)) & " " & Trim(Valores(1)), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
+            Borra(Campos, Valores, 2)
+            'End If
         Catch ex As Exception
             MensajeError.Text = "Error al Eliminar " & Campos(0) & " " & Campos(1) & "=" & Trim(Valores(0)) & " " & Trim(Valores(1)) & " - Mensaje de Error : " & ex.Message
         Finally
@@ -737,9 +737,9 @@ Public Partial Class Agrupaciones
             Valores(0) = source.Items(e.Item.ItemIndex).Cells(2).Text()
             Campos(1) = "SOCIEDAD"
             Valores(1) = CType(e.Item.Cells(3).FindControl("DropDownlist1"), DropDownList).Text
-            If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & "-" & Campos(1) & "=" & Valores(0) & "-" & Valores(1), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
-                Borra(Campos, Valores, 3)
-            End If
+            'If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & "-" & Campos(1) & "=" & Valores(0) & "-" & Valores(1), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
+            Borra(Campos, Valores, 3)
+            'End If
         Catch ex As Exception
             MensajeError.Text = "Error al Eliminar " & Campos(0) & "-" & Campos(1) & "=" & Valores(0) & "-" & Valores(1) & " - Mensaje de Error : " & ex.Message
         Finally
@@ -845,9 +845,9 @@ Public Partial Class Agrupaciones
             Valores(1) = CType(e.Item.Cells(4).FindControl("D1"), DropDownList).Text
             Campos(2) = "CODIGO"
             Valores(2) = CType(e.Item.Cells(4).FindControl("D2"), DropDownList).Text
-            If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & " " & Campos(1) & " " & Campos(2) & "=" & Trim(Valores(0)) & " " & Trim(Valores(1)) & " " & Trim(Valores(2)), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
-                Borra(Campos, Valores, 4)
-            End If
+            'If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & " " & Campos(1) & " " & Campos(2) & "=" & Trim(Valores(0)) & " " & Trim(Valores(1)) & " " & Trim(Valores(2)), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
+            Borra(Campos, Valores, 4)
+            'End If
         Catch ex As Exception
             MensajeError.Text = "Error al Eliminar " & Campos(0) & " " & Campos(1) & " " & Campos(2) & "=" & Trim(Valores(0)) & " " & Trim(Valores(1)) & " " & Trim(Valores(2)) & " - Mensaje de Error : " & ex.Message
         Finally
@@ -1012,9 +1012,9 @@ Public Partial Class Agrupaciones
             Valores(0) = source.Items(e.Item.ItemIndex).Cells(2).Text()
             Campos(1) = "TIPO_DATO"
             Valores(1) = CType(e.Item.Cells(4).FindControl("D1"), DropDownList).Text
-            If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & " " & Campos(1) & "=" & Trim(Valores(0)) & " " & Trim(Valores(1)), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
-                Borra(Campos, Valores, 5)
-            End If
+            'If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & " " & Campos(1) & "=" & Trim(Valores(0)) & " " & Trim(Valores(1)), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
+            Borra(Campos, Valores, 5)
+            'End If
         Catch ex As Exception
             MensajeError.Text = "Error al Eliminar " & Campos(0) & " " & Campos(1) & "=" & Trim(Valores(0)) & " " & Trim(Valores(1)) & " - Mensaje de Error : " & ex.Message
         Finally
@@ -1107,9 +1107,9 @@ Public Partial Class Agrupaciones
             Valores(0) = source.Items(e.Item.ItemIndex).Cells(2).Text()
             Campos(1) = "TIPO_LOCALIDAD"
             Valores(1) = CType(e.Item.Cells(2).FindControl("DropDownList1"), DropDownList).Text
-            If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & " " & Campos(1) & "=" & Trim(Valores(0)) & " " & Trim(Valores(1)), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
-                Borra(Campos, Valores, 6)
-            End If
+            'If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & " " & Campos(1) & "=" & Trim(Valores(0)) & " " & Trim(Valores(1)), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
+            Borra(Campos, Valores, 6)
+            'End If
         Catch ex As Exception
             MensajeError.Text = "Error al Eliminar " & Campos(0) & " " & Campos(1) & "=" & Trim(Valores(0)) & " " & Trim(Valores(1)) & " - Mensaje de Error : " & ex.Message
         Finally

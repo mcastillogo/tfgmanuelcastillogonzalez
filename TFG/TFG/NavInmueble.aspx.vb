@@ -114,11 +114,11 @@ Public Partial Class NavInmueble
             Valores(3) = zz2.Text
             TextoValor = TextoValor & " " & Valores(3)
 
-        
 
-            If MsgBox("¿Desea Eliminar definitivamente el registro? " & TextoCampo & " = " & TextoValor, MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
-                Borra(Campos, Valores, Session("NvXDetalle"))
-            End If
+
+            'If MsgBox("¿Desea Eliminar definitivamente el registro? " & TextoCampo & " = " & TextoValor, MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
+            Borra(Campos, Valores, Session("NvXDetalle"))
+            'End If
         Catch ex As Exception
             MensajeError.Text = "Error al Eliminar " & TextoCampo & "=" & TextoValor & " - Mensaje de Error : " & ex.Message
         Finally

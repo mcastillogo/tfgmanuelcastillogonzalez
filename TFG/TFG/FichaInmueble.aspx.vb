@@ -247,13 +247,13 @@ Partial Public Class FichaInmueble
         Dim title As String
         Dim style As MsgBoxStyle
         Dim resultado As MsgBoxResult
-        msg = "¿Esta Vd. Seguro de querer eliminar este Inmueble y toda la Información Relacionada con él?"
-        style = MsgBoxStyle.DefaultButton2 Or _
-           MsgBoxStyle.Critical Or MsgBoxStyle.YesNo
-        title = "CONFIRMACION ELIMINACIÓN INMUEBLE"
-        resultado = MsgBox(msg, style, title)
-        If resultado = MsgBoxResult.Yes Then
-            Try
+        'msg = "¿Esta Vd. Seguro de querer eliminar este Inmueble y toda la Información Relacionada con él?"
+        'style = MsgBoxStyle.DefaultButton2 Or _
+        'MsgBoxStyle.Critical Or MsgBoxStyle.YesNo
+        'title = "CONFIRMACION ELIMINACIÓN INMUEBLE"
+        'resultado = MsgBox(msg, style, title)
+        'If resultado = MsgBoxResult.Yes Then
+        Try
                 'Grabación de Datos en el Histórico
                 With Borrar
                     Dim Comando As New SqlClient.SqlCommand
@@ -297,7 +297,7 @@ Partial Public Class FichaInmueble
                 MensajeError.Text = "Se produjo un error durante la operación de borrado, se realizara rollback"
                 ContextUtil.SetAbort()
             End Try
-        End If
+        'End If
         Session("XPanel") = 0
         Response.Redirect("/Inmuebles.aspx")
     End Sub

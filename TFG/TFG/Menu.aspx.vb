@@ -5,15 +5,7 @@ Partial Public Class _Default
     Public Tabla As String
     Public Campos(10), Valores(10) As String
 
-    'Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-    'If Session("TResponsable") = -1 Then
-    '        Menu2.Items("Agrupaciones").Enabled = True
-    '        Menu2.Items("Seguridad").Enabled = True
-    'Else
-    '        Menu2.Items("Agrupaciones").Enabled = False
-    '        Menu2.Items("Seguridad").Enabled = False
-    'End If
-    'End Sub
+
 
     Protected Sub Menu2_MenuItemClick(ByVal sender As System.Object, ByVal e As System.Web.UI.WebControls.MenuEventArgs) Handles Menu2.MenuItemClick
 
@@ -56,7 +48,7 @@ Partial Public Class _Default
                 Response.Redirect("/Informe_3.aspx")
             Case "Datos Tipología"
                 Response.Redirect("/Informe_4.aspx")
-            Case "Datos de Uso Urbanístico"
+            Case "Datos Uso Urbanístico"
                 Response.Redirect("/Informe_5.aspx")
             Case "Datos Estado"
                 Response.Redirect("/Informe_6.aspx")
@@ -189,9 +181,9 @@ Partial Public Class _Default
         Try
             Campos(0) = Session("XDatos").DataKeyField
             Valores(0) = Session("XDatos").Items(e.Item.ItemIndex).Cells(2).Text()
-            If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & "=" & Valores(0), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
-                Borra(Campos, Valores)
-            End If
+            'If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & "=" & Valores(0), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
+            Borra(Campos, Valores)
+            'End If
         Catch ex As Exception
             MensajeError.Text = "Error al Eliminar " & Campos(0) & " = " & Valores(0) & " - Mensaje de Error : " & ex.Message
         Finally
@@ -226,9 +218,9 @@ Partial Public Class _Default
         Try
             Campos(0) = Session("XDatos").DataKeyField
             Valores(0) = Session("XDatos").Items(e.Item.ItemIndex).Cells(2).Text()
-            If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & "=" & Valores(0), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
-                Borra(Campos, Valores)
-            End If
+            'If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & "=" & Valores(0), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
+            Borra(Campos, Valores)
+            'End If
         Catch ex As Exception
             MensajeError.Text = "Error al Eliminar " & Campos(0) & " = " & Valores(0) & " - Mensaje de Error : " & ex.Message
         Finally
@@ -258,9 +250,9 @@ Partial Public Class _Default
         Try
             Campos(0) = Session("XDatos").DataKeyField
             Valores(0) = Session("XDatos").Items(e.Item.ItemIndex).Cells(3).Text()
-            If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & "=" & Valores(0), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
-                Borra(Campos, Valores)
-            End If
+            'If MsgBox("¿Desea Eliminar definitivamente el registro? " & Campos(0) & "=" & Valores(0), MsgBoxStyle.YesNo, "Mensaje de Confirmacion") = 6 Then
+            Borra(Campos, Valores)
+            'End If
         Catch ex As Exception
             MensajeError.Text = "Error al Eliminar " & Campos(0) & " = " & Valores(0) & " - Mensaje de Error : " & ex.Message
         Finally

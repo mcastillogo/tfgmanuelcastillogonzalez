@@ -54,8 +54,8 @@ Public Class Navegador
         strScript &= "openChild('" & Url & "',atributos)" & vbCrLf
         strScript &= "</script>" & vbCrLf
 
-        Pag.RegisterStartupScript("AbrirPopUp", script)
-        Pag.RegisterStartupScript("VentanaHija", strScript)
+        'Pag.RegisterStartupScript("AbrirPopUp", script)
+        'Pag.RegisterStartupScript("VentanaHija", strScript)
 
     End Sub
 
@@ -96,7 +96,7 @@ Public Class Navegador
         strScript &= "}" & vbCrLf
         strScript &= "</script>" & vbCrLf
 
-        Pag.RegisterStartupScript("VentanaHija", strScript)
+        'Pag.RegisterStartupScript("VentanaHija", strScript)
 
     End Sub
 
@@ -114,7 +114,7 @@ Public Class Navegador
         strScript &= "reloadParent();" & vbCrLf
         strScript &= "</script>" & vbCrLf
 
-        Pag.RegisterStartupScript("Cargar", strScript)
+        'Pag.RegisterStartupScript("Cargar", strScript)
         CerrarPantalla_TimeOut(Segundos)
 
     End Sub
@@ -138,7 +138,7 @@ Public Class Navegador
         strScript &= "setTimeout(""cerrar()"", " & Segundos & ")" & vbCrLf
         strScript &= "</script>" & vbCrLf
 
-        Pag.RegisterStartupScript("CerrarVentanaTimeOut", strScript)
+        'Pag.RegisterStartupScript("CerrarVentanaTimeOut", strScript)
 
     End Sub
 
@@ -160,7 +160,7 @@ Public Class Navegador
         strScript &= "document.oncontextmenu=new Function(""return false"")" & vbCrLf
         strScript &= "</script>" & vbCrLf
 
-        Pag.RegisterClientScriptBlock("noClickDerecho", strScript)
+        'Pag.RegisterClientScriptBlock("noClickDerecho", strScript)
 
     End Sub
 
@@ -184,8 +184,8 @@ Public Class Navegador
         strScript &= "}" & vbCrLf
         strScript &= "</script>" & vbCrLf
 
-        Pag.RegisterClientScriptBlock("MaximizarPantalla", strScript)
-
+        'Pag.RegisterClientScriptBlock("MaximizarPantalla", strScript)
+        
     End Sub
 
 
@@ -204,7 +204,7 @@ Public Class Navegador
         script &= "document.onkeydown = keydown;"
         script &= "</script>"
 
-        Pag.RegisterClientScriptBlock("noIntro", script)
+        'Pag.RegisterClientScriptBlock("noIntro", script)
 
     End Sub
 
@@ -247,7 +247,7 @@ Public Class WebForm1
         Dim texto As String = Request.QueryString("texto")
         Me.Label1.Text = texto
 
-        Dim Navegador As New ControlesWebPersonalizados.Navegador(Me.Page)
+        Dim Navegador As New Navegador(Me.Page)
         Navegador.Deshabilitar_ClickDerecho()
         Navegador.MaximizarVentana_ResolucionCliente()
         Navegador = Nothing
@@ -256,7 +256,7 @@ Public Class WebForm1
 
     Private Sub LinkButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LinkButton1.Click
 
-        Dim Navegador As New ControlesWebPersonalizados.Navegador(Me.Page)
+        Dim Navegador As New Navegador(Me.Page)
         Navegador.Abrir_Ventana_Hija("WebForm2.aspx", 400, 300, True)
         Navegador = Nothing
 
@@ -264,7 +264,7 @@ Public Class WebForm1
 
     Private Sub LinkButton2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LinkButton2.Click
 
-        Dim Navegador As New ControlesWebPersonalizados.Navegador(Me.Page)
+        Dim Navegador As New Navegador(Me.Page)
         Navegador.Abrir_Ventana_Hija("http://www.google.es", 600, 400, True)
         Navegador = Nothing
 
@@ -280,7 +280,7 @@ End Class
 Public Class WebForm2
     Inherits System.Web.UI.Page
 
-    Private Navegador As New ControlesWebPersonalizados.Navegador(Me.Page)
+    Private Navegador As New Navegador(Me.Page)
 
     Protected WithEvents TextBox1 As System.Web.UI.WebControls.TextBox
     Protected WithEvents Button1 As System.Web.UI.WebControls.Button

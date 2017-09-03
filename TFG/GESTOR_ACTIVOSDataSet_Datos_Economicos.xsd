@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GESTOR_ACTIVOSDataSet_Datos_Economicos" targetNamespace="http://tempuri.org/GESTOR_ACTIVOSDataSet_Datos_Economicos.xsd" xmlns:mstns="http://tempuri.org/GESTOR_ACTIVOSDataSet_Datos_Economicos.xsd" xmlns="http://tempuri.org/GESTOR_ACTIVOSDataSet_Datos_Economicos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="GESTOR_ACTIVOSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GESTOR_ACTIVOSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.GESTOR_ACTIVOSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Seleccion_Elementos_New_Datos_EconomicosTableAdapter" GeneratorDataComponentClassName="Seleccion_Elementos_New_Datos_EconomicosTableAdapter" Name="Seleccion_Elementos_New_Datos_Economicos" UserDataComponentName="Seleccion_Elementos_New_Datos_EconomicosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GESTOR_ACTIVOSConnectionString (Web.config)" DbObjectName="GESTOR_ACTIVOS.dbo.Seleccion_Elementos_New_Datos_Economicos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT SOCIEDAD, CODIGO, CENTRO, REF_CATASTRAL, DESCRIPCION_CORTA, TIPO_GRUPO_INTERNO, TIPO_GRUPO_SOCIEDAD, ID, FECHA, TIPO_DATO_ECONOMICO, VALOR, TIPO_CARGA, TIPO_ENTIDAD_TASADORA, OBSERVACIONES, USUARIO, DESCRIPCION, DESC_CARGA, DESC_ENT_TASADORA, DESC_CENTRO FROM dbo.Seleccion_Elementos_New_Datos_Economicos() AS Seleccion_Elementos_New_Datos_Economicos_1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SOCIEDAD" DataSetColumn="SOCIEDAD" />
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+              <Mapping SourceColumn="CENTRO" DataSetColumn="CENTRO" />
+              <Mapping SourceColumn="REF_CATASTRAL" DataSetColumn="REF_CATASTRAL" />
+              <Mapping SourceColumn="DESCRIPCION_CORTA" DataSetColumn="DESCRIPCION_CORTA" />
+              <Mapping SourceColumn="TIPO_GRUPO_INTERNO" DataSetColumn="TIPO_GRUPO_INTERNO" />
+              <Mapping SourceColumn="TIPO_GRUPO_SOCIEDAD" DataSetColumn="TIPO_GRUPO_SOCIEDAD" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="TIPO_DATO_ECONOMICO" DataSetColumn="TIPO_DATO_ECONOMICO" />
+              <Mapping SourceColumn="VALOR" DataSetColumn="VALOR" />
+              <Mapping SourceColumn="TIPO_CARGA" DataSetColumn="TIPO_CARGA" />
+              <Mapping SourceColumn="TIPO_ENTIDAD_TASADORA" DataSetColumn="TIPO_ENTIDAD_TASADORA" />
+              <Mapping SourceColumn="OBSERVACIONES" DataSetColumn="OBSERVACIONES" />
+              <Mapping SourceColumn="USUARIO" DataSetColumn="USUARIO" />
+              <Mapping SourceColumn="DESCRIPCION" DataSetColumn="DESCRIPCION" />
+              <Mapping SourceColumn="DESC_CARGA" DataSetColumn="DESC_CARGA" />
+              <Mapping SourceColumn="DESC_ENT_TASADORA" DataSetColumn="DESC_ENT_TASADORA" />
+              <Mapping SourceColumn="DESC_CENTRO" DataSetColumn="DESC_CENTRO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GESTOR_ACTIVOSDataSet_Datos_Economicos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GESTOR_ACTIVOSDataSet_Datos_Economicos" msprop:Generator_UserDSName="GESTOR_ACTIVOSDataSet_Datos_Economicos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Seleccion_Elementos_New_Datos_Economicos" msprop:Generator_TableClassName="Seleccion_Elementos_New_Datos_EconomicosDataTable" msprop:Generator_TableVarName="tableSeleccion_Elementos_New_Datos_Economicos" msprop:Generator_RowChangedName="Seleccion_Elementos_New_Datos_EconomicosRowChanged" msprop:Generator_TablePropName="Seleccion_Elementos_New_Datos_Economicos" msprop:Generator_RowDeletingName="Seleccion_Elementos_New_Datos_EconomicosRowDeleting" msprop:Generator_RowChangingName="Seleccion_Elementos_New_Datos_EconomicosRowChanging" msprop:Generator_RowEvHandlerName="Seleccion_Elementos_New_Datos_EconomicosRowChangeEventHandler" msprop:Generator_RowDeletedName="Seleccion_Elementos_New_Datos_EconomicosRowDeleted" msprop:Generator_RowClassName="Seleccion_Elementos_New_Datos_EconomicosRow" msprop:Generator_UserTableName="Seleccion_Elementos_New_Datos_Economicos" msprop:Generator_RowEvArgName="Seleccion_Elementos_New_Datos_EconomicosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SOCIEDAD" msprop:Generator_ColumnVarNameInTable="columnSOCIEDAD" msprop:Generator_ColumnPropNameInRow="SOCIEDAD" msprop:Generator_ColumnPropNameInTable="SOCIEDADColumn" msprop:Generator_UserColumnName="SOCIEDAD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" msprop:Generator_UserColumnName="CODIGO" type="xs:short" />
+              <xs:element name="CENTRO" msprop:Generator_ColumnVarNameInTable="columnCENTRO" msprop:Generator_ColumnPropNameInRow="CENTRO" msprop:Generator_ColumnPropNameInTable="CENTROColumn" msprop:Generator_UserColumnName="CENTRO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="REF_CATASTRAL" msprop:Generator_ColumnVarNameInTable="columnREF_CATASTRAL" msprop:Generator_ColumnPropNameInRow="REF_CATASTRAL" msprop:Generator_ColumnPropNameInTable="REF_CATASTRALColumn" msprop:Generator_UserColumnName="REF_CATASTRAL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPCION_CORTA" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION_CORTA" msprop:Generator_ColumnPropNameInRow="DESCRIPCION_CORTA" msprop:Generator_ColumnPropNameInTable="DESCRIPCION_CORTAColumn" msprop:Generator_UserColumnName="DESCRIPCION_CORTA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_GRUPO_INTERNO" msprop:Generator_ColumnVarNameInTable="columnTIPO_GRUPO_INTERNO" msprop:Generator_ColumnPropNameInRow="TIPO_GRUPO_INTERNO" msprop:Generator_ColumnPropNameInTable="TIPO_GRUPO_INTERNOColumn" msprop:Generator_UserColumnName="TIPO_GRUPO_INTERNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_GRUPO_SOCIEDAD" msprop:Generator_ColumnVarNameInTable="columnTIPO_GRUPO_SOCIEDAD" msprop:Generator_ColumnPropNameInRow="TIPO_GRUPO_SOCIEDAD" msprop:Generator_ColumnPropNameInTable="TIPO_GRUPO_SOCIEDADColumn" msprop:Generator_UserColumnName="TIPO_GRUPO_SOCIEDAD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:short" minOccurs="0" />
+              <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TIPO_DATO_ECONOMICO" msprop:Generator_ColumnVarNameInTable="columnTIPO_DATO_ECONOMICO" msprop:Generator_ColumnPropNameInRow="TIPO_DATO_ECONOMICO" msprop:Generator_ColumnPropNameInTable="TIPO_DATO_ECONOMICOColumn" msprop:Generator_UserColumnName="TIPO_DATO_ECONOMICO" type="xs:short" minOccurs="0" />
+              <xs:element name="VALOR" msprop:Generator_ColumnVarNameInTable="columnVALOR" msprop:Generator_ColumnPropNameInRow="VALOR" msprop:Generator_ColumnPropNameInTable="VALORColumn" msprop:Generator_UserColumnName="VALOR" type="xs:float" minOccurs="0" />
+              <xs:element name="TIPO_CARGA" msprop:Generator_ColumnVarNameInTable="columnTIPO_CARGA" msprop:Generator_ColumnPropNameInRow="TIPO_CARGA" msprop:Generator_ColumnPropNameInTable="TIPO_CARGAColumn" msprop:Generator_UserColumnName="TIPO_CARGA" type="xs:short" minOccurs="0" />
+              <xs:element name="TIPO_ENTIDAD_TASADORA" msprop:Generator_ColumnVarNameInTable="columnTIPO_ENTIDAD_TASADORA" msprop:Generator_ColumnPropNameInRow="TIPO_ENTIDAD_TASADORA" msprop:Generator_ColumnPropNameInTable="TIPO_ENTIDAD_TASADORAColumn" msprop:Generator_UserColumnName="TIPO_ENTIDAD_TASADORA" type="xs:short" minOccurs="0" />
+              <xs:element name="OBSERVACIONES" msprop:Generator_ColumnVarNameInTable="columnOBSERVACIONES" msprop:Generator_ColumnPropNameInRow="OBSERVACIONES" msprop:Generator_ColumnPropNameInTable="OBSERVACIONESColumn" msprop:Generator_UserColumnName="OBSERVACIONES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USUARIO" msprop:Generator_ColumnVarNameInTable="columnUSUARIO" msprop:Generator_ColumnPropNameInRow="USUARIO" msprop:Generator_ColumnPropNameInTable="USUARIOColumn" msprop:Generator_UserColumnName="USUARIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_UserColumnName="DESCRIPCION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESC_CARGA" msprop:Generator_ColumnVarNameInTable="columnDESC_CARGA" msprop:Generator_ColumnPropNameInRow="DESC_CARGA" msprop:Generator_ColumnPropNameInTable="DESC_CARGAColumn" msprop:Generator_UserColumnName="DESC_CARGA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESC_ENT_TASADORA" msprop:Generator_ColumnVarNameInTable="columnDESC_ENT_TASADORA" msprop:Generator_ColumnPropNameInRow="DESC_ENT_TASADORA" msprop:Generator_ColumnPropNameInTable="DESC_ENT_TASADORAColumn" msprop:Generator_UserColumnName="DESC_ENT_TASADORA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESC_CENTRO" msprop:Generator_ColumnVarNameInTable="columnDESC_CENTRO" msprop:Generator_ColumnPropNameInRow="DESC_CENTRO" msprop:Generator_ColumnPropNameInTable="DESC_CENTROColumn" msprop:Generator_UserColumnName="DESC_CENTRO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Seleccion_Elementos_New_Datos_Economicos" />
+      <xs:field xpath="mstns:SOCIEDAD" />
+      <xs:field xpath="mstns:CODIGO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

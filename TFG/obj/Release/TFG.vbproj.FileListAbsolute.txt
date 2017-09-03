@@ -1,0 +1,17 @@
+C:\inetpub\wwwroot\TFG\TFG\obj\Release\TFG.vbprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\TFG\TFG\obj\Release\GESTACTIV._Default.resources
+C:\inetpub\wwwroot\TFG\TFG\obj\Release\GESTACTIV.Resources.resources
+C:\inetpub\wwwroot\TFG\TFG\obj\Release\GESTACTIV.Seguridad.resources
+C:\inetpub\wwwroot\TFG\TFG\obj\Release\TFG.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\TFG\TFG\obj\Release\RdlCompile.cache
+C:\inetpub\wwwroot\TFG\TFG\obj\Release\RdlCompile.compiled
+C:\inetpub\wwwroot\TFG\TFG\obj\Release\GESTACTIV.dll
+C:\inetpub\wwwroot\TFG\TFG\obj\Release\GESTACTIV.xml
+C:\inetpub\wwwroot\TFG\TFG\obj\Release\GESTACTIV.pdb
+C:\inetpub\wwwroot\TFG\TFG\bin\GESTACTIV.dll.config
+C:\inetpub\wwwroot\TFG\TFG\bin\GESTACTIV.dll
+C:\inetpub\wwwroot\TFG\TFG\bin\GESTACTIV.pdb
+C:\inetpub\wwwroot\TFG\TFG\bin\GESTACTIV.xml
+C:\inetpub\wwwroot\TFG\TFG\bin\GESTACTIV.tlb
+C:\inetpub\wwwroot\TFG\TFG\bin\Microsoft.ReportViewer.WebForms.dll
+C:\inetpub\wwwroot\TFG\TFG\bin\es\Microsoft.ReportViewer.WebForms.resources.dll

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet4" targetNamespace="http://tempuri.org/DataSet4.xsd" xmlns:mstns="http://tempuri.org/DataSet4.xsd" xmlns="http://tempuri.org/DataSet4.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="GESTOR_ACTIVOSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GESTOR_ACTIVOSConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.GESTOR_ACTIVOSConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Seleccion_Elementos_New_Datos_TipologiaTableAdapter" GeneratorDataComponentClassName="Seleccion_Elementos_New_Datos_TipologiaTableAdapter" Name="Seleccion_Elementos_New_Datos_Tipologia" UserDataComponentName="Seleccion_Elementos_New_Datos_TipologiaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GESTOR_ACTIVOSConnectionString (Web.config)" DbObjectName="GESTOR_ACTIVOS.dbo.Seleccion_Elementos_New_Datos_Tipologia" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Seleccion_Elementos_New_Datos_Tipologia.*
+FROM            Seleccion_Elementos_New_Datos_Tipologia</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SOCIEDAD" DataSetColumn="SOCIEDAD" />
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+              <Mapping SourceColumn="CENTRO" DataSetColumn="CENTRO" />
+              <Mapping SourceColumn="REF_CATASTRAL" DataSetColumn="REF_CATASTRAL" />
+              <Mapping SourceColumn="IBI" DataSetColumn="IBI" />
+              <Mapping SourceColumn="DESCRIPCION_CORTA" DataSetColumn="DESCRIPCION_CORTA" />
+              <Mapping SourceColumn="TIPO_GRUPO_INTERNO" DataSetColumn="TIPO_GRUPO_INTERNO" />
+              <Mapping SourceColumn="TIPO_GRUPO_SOCIEDAD" DataSetColumn="TIPO_GRUPO_SOCIEDAD" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="TIPO_TIPOLOGIA" DataSetColumn="TIPO_TIPOLOGIA" />
+              <Mapping SourceColumn="SUPERFICIE" DataSetColumn="SUPERFICIE" />
+              <Mapping SourceColumn="SUPERFICIE_CONSTRUIDA" DataSetColumn="SUPERFICIE_CONSTRUIDA" />
+              <Mapping SourceColumn="SUPERFICIE_REAL" DataSetColumn="SUPERFICIE_REAL" />
+              <Mapping SourceColumn="EDIFICABILIDAD_PARCELA" DataSetColumn="EDIFICABILIDAD_PARCELA" />
+              <Mapping SourceColumn="EDIFICABILIDAD_PARCELA_REAL" DataSetColumn="EDIFICABILIDAD_PARCELA_REAL" />
+              <Mapping SourceColumn="EDIFICACION_LEGALIZADA" DataSetColumn="EDIFICACION_LEGALIZADA" />
+              <Mapping SourceColumn="OBSERVACIONES" DataSetColumn="OBSERVACIONES" />
+              <Mapping SourceColumn="USUARIO" DataSetColumn="USUARIO" />
+              <Mapping SourceColumn="DESC_TIPOLOGIA" DataSetColumn="DESC_TIPOLOGIA" />
+              <Mapping SourceColumn="DESC_CENTRO" DataSetColumn="DESC_CENTRO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet4" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet4" msprop:Generator_UserDSName="DataSet4">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Seleccion_Elementos_New_Datos_Tipologia" msprop:Generator_TableClassName="Seleccion_Elementos_New_Datos_TipologiaDataTable" msprop:Generator_TableVarName="tableSeleccion_Elementos_New_Datos_Tipologia" msprop:Generator_TablePropName="Seleccion_Elementos_New_Datos_Tipologia" msprop:Generator_RowDeletingName="Seleccion_Elementos_New_Datos_TipologiaRowDeleting" msprop:Generator_RowChangingName="Seleccion_Elementos_New_Datos_TipologiaRowChanging" msprop:Generator_RowEvHandlerName="Seleccion_Elementos_New_Datos_TipologiaRowChangeEventHandler" msprop:Generator_RowDeletedName="Seleccion_Elementos_New_Datos_TipologiaRowDeleted" msprop:Generator_UserTableName="Seleccion_Elementos_New_Datos_Tipologia" msprop:Generator_RowChangedName="Seleccion_Elementos_New_Datos_TipologiaRowChanged" msprop:Generator_RowEvArgName="Seleccion_Elementos_New_Datos_TipologiaRowChangeEvent" msprop:Generator_RowClassName="Seleccion_Elementos_New_Datos_TipologiaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SOCIEDAD" msprop:Generator_ColumnVarNameInTable="columnSOCIEDAD" msprop:Generator_ColumnPropNameInRow="SOCIEDAD" msprop:Generator_ColumnPropNameInTable="SOCIEDADColumn" msprop:Generator_UserColumnName="SOCIEDAD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" msprop:Generator_UserColumnName="CODIGO" type="xs:short" />
+              <xs:element name="CENTRO" msprop:Generator_ColumnVarNameInTable="columnCENTRO" msprop:Generator_ColumnPropNameInRow="CENTRO" msprop:Generator_ColumnPropNameInTable="CENTROColumn" msprop:Generator_UserColumnName="CENTRO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="REF_CATASTRAL" msprop:Generator_ColumnVarNameInTable="columnREF_CATASTRAL" msprop:Generator_ColumnPropNameInRow="REF_CATASTRAL" msprop:Generator_ColumnPropNameInTable="REF_CATASTRALColumn" msprop:Generator_UserColumnName="REF_CATASTRAL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IBI" msprop:Generator_ColumnVarNameInTable="columnIBI" msprop:Generator_ColumnPropNameInRow="IBI" msprop:Generator_ColumnPropNameInTable="IBIColumn" msprop:Generator_UserColumnName="IBI" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DESCRIPCION_CORTA" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION_CORTA" msprop:Generator_ColumnPropNameInRow="DESCRIPCION_CORTA" msprop:Generator_ColumnPropNameInTable="DESCRIPCION_CORTAColumn" msprop:Generator_UserColumnName="DESCRIPCION_CORTA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_GRUPO_INTERNO" msprop:Generator_ColumnVarNameInTable="columnTIPO_GRUPO_INTERNO" msprop:Generator_ColumnPropNameInRow="TIPO_GRUPO_INTERNO" msprop:Generator_ColumnPropNameInTable="TIPO_GRUPO_INTERNOColumn" msprop:Generator_UserColumnName="TIPO_GRUPO_INTERNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_GRUPO_SOCIEDAD" msprop:Generator_ColumnVarNameInTable="columnTIPO_GRUPO_SOCIEDAD" msprop:Generator_ColumnPropNameInRow="TIPO_GRUPO_SOCIEDAD" msprop:Generator_ColumnPropNameInTable="TIPO_GRUPO_SOCIEDADColumn" msprop:Generator_UserColumnName="TIPO_GRUPO_SOCIEDAD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TIPO_TIPOLOGIA" msprop:Generator_ColumnVarNameInTable="columnTIPO_TIPOLOGIA" msprop:Generator_ColumnPropNameInRow="TIPO_TIPOLOGIA" msprop:Generator_ColumnPropNameInTable="TIPO_TIPOLOGIAColumn" msprop:Generator_UserColumnName="TIPO_TIPOLOGIA" type="xs:short" minOccurs="0" />
+              <xs:element name="SUPERFICIE" msprop:Generator_ColumnVarNameInTable="columnSUPERFICIE" msprop:Generator_ColumnPropNameInRow="SUPERFICIE" msprop:Generator_ColumnPropNameInTable="SUPERFICIEColumn" msprop:Generator_UserColumnName="SUPERFICIE" type="xs:double" minOccurs="0" />
+              <xs:element name="SUPERFICIE_CONSTRUIDA" msprop:Generator_ColumnVarNameInTable="columnSUPERFICIE_CONSTRUIDA" msprop:Generator_ColumnPropNameInRow="SUPERFICIE_CONSTRUIDA" msprop:Generator_ColumnPropNameInTable="SUPERFICIE_CONSTRUIDAColumn" msprop:Generator_UserColumnName="SUPERFICIE_CONSTRUIDA" type="xs:double" minOccurs="0" />
+              <xs:element name="SUPERFICIE_REAL" msprop:Generator_ColumnVarNameInTable="columnSUPERFICIE_REAL" msprop:Generator_ColumnPropNameInRow="SUPERFICIE_REAL" msprop:Generator_ColumnPropNameInTable="SUPERFICIE_REALColumn" msprop:Generator_UserColumnName="SUPERFICIE_REAL" type="xs:double" minOccurs="0" />
+              <xs:element name="EDIFICABILIDAD_PARCELA" msprop:Generator_ColumnVarNameInTable="columnEDIFICABILIDAD_PARCELA" msprop:Generator_ColumnPropNameInRow="EDIFICABILIDAD_PARCELA" msprop:Generator_ColumnPropNameInTable="EDIFICABILIDAD_PARCELAColumn" msprop:Generator_UserColumnName="EDIFICABILIDAD_PARCELA" type="xs:double" minOccurs="0" />
+              <xs:element name="EDIFICABILIDAD_PARCELA_REAL" msprop:Generator_ColumnVarNameInTable="columnEDIFICABILIDAD_PARCELA_REAL" msprop:Generator_ColumnPropNameInRow="EDIFICABILIDAD_PARCELA_REAL" msprop:Generator_ColumnPropNameInTable="EDIFICABILIDAD_PARCELA_REALColumn" msprop:Generator_UserColumnName="EDIFICABILIDAD_PARCELA_REAL" type="xs:double" minOccurs="0" />
+              <xs:element name="EDIFICACION_LEGALIZADA" msprop:Generator_ColumnVarNameInTable="columnEDIFICACION_LEGALIZADA" msprop:Generator_ColumnPropNameInRow="EDIFICACION_LEGALIZADA" msprop:Generator_ColumnPropNameInTable="EDIFICACION_LEGALIZADAColumn" msprop:Generator_UserColumnName="EDIFICACION_LEGALIZADA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="OBSERVACIONES" msprop:Generator_ColumnVarNameInTable="columnOBSERVACIONES" msprop:Generator_ColumnPropNameInRow="OBSERVACIONES" msprop:Generator_ColumnPropNameInTable="OBSERVACIONESColumn" msprop:Generator_UserColumnName="OBSERVACIONES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USUARIO" msprop:Generator_ColumnVarNameInTable="columnUSUARIO" msprop:Generator_ColumnPropNameInRow="USUARIO" msprop:Generator_ColumnPropNameInTable="USUARIOColumn" msprop:Generator_UserColumnName="USUARIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESC_TIPOLOGIA" msprop:Generator_ColumnVarNameInTable="columnDESC_TIPOLOGIA" msprop:Generator_ColumnPropNameInRow="DESC_TIPOLOGIA" msprop:Generator_ColumnPropNameInTable="DESC_TIPOLOGIAColumn" msprop:Generator_UserColumnName="DESC_TIPOLOGIA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESC_CENTRO" msprop:Generator_ColumnVarNameInTable="columnDESC_CENTRO" msprop:Generator_ColumnPropNameInRow="DESC_CENTRO" msprop:Generator_ColumnPropNameInTable="DESC_CENTROColumn" msprop:Generator_UserColumnName="DESC_CENTRO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

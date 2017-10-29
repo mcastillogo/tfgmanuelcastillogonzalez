@@ -12,7 +12,8 @@
     <div title="GESTACTIV - FICHA INMUEBLE">
         <div>
             <div>
-                <img id="I_1_Inmuebles" alt="" src="logotipo-gestactiv.png" style="z-index: 108; left: 24px;
+        <img alt="" src="fondo-03-02.png" style="z-index: -1; left: 0px; width: 1439px;
+            position: absolute; top: 0px; height: 723px; margin-right: 0px; margin-bottom: 0px;" /><img id="I_1_Inmuebles" alt="" src="logotipo-gestactiv.png" style="z-index: 108; left: 24px;
                     width: 118px; position: absolute; top: 8px; height: 87px; background-color: #FFFFFF;" />
                 <img id="I_2_Inmuebles" alt="" src="man-2546224_960_720.png" style="z-index: 107; left: 146px;
                     width: 179px; position: absolute; top: 9px; height: 88px" />
@@ -550,13 +551,12 @@
                     <asp:SqlDataSource ID="SqlDataSource6" runat="server"
                         SelectCommand="SELECT * FROM [TIPO_CERTIFICACION]" ConnectionString="<%$ ConnectionStrings:GESTOR_ACTIVOSConnectionString %>"></asp:SqlDataSource>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:SqlDataSource ID="SqlDataSource44" runat="server"
-                        SelectCommand="SELECT DISTINCT TIPO_LOCALIDAD, Expr1 FROM Seleccion_Provincia_Localidad WHERE (TIPO_PROVINCIA = @TIPO_PROVINCIA)" ConnectionString="<%$ ConnectionStrings:GESTOR_ACTIVOSConnectionString %>">
+                    <asp:SqlDataSource ID="SqlDataSource44" runat="server" ConnectionString="<%$ ConnectionStrings:GESTOR_ACTIVOSConnectionString %>" SelectCommand="SELECT DISTINCT TIPO_LOCALIDAD, Expr1 FROM Seleccion_Provincia_Localidad WHERE (TIPO_PROVINCIA = @TIPO_PROVINCIA)">
                         <SelectParameters>
-                            <asp:SessionParameter Name="TIPO_PROVINCIA" SessionField="X2_TIPO_PROVINCIA" DefaultValue="" />
+                            <asp:SessionParameter DefaultValue="" Name="TIPO_PROVINCIA" SessionField="X2_TIPO_PROVINCIA" />
                         </SelectParameters>
                     </asp:SqlDataSource>
-                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
                     <asp:SqlDataSource ID="SqlDataSource7" runat="server"
                         SelectCommand="SELECT CODIGO_RESPONSABLE, APELLIDO_1 + ' ' + APELLIDO_2 + ' ,' + NOMBRE AS NOMBRE_COMPLETO FROM CODIGO_RESPONSABLE WHERE (TIPO_RESPONSABLE = @TIPO_RESPONSABLE)">
                         <SelectParameters>
@@ -606,8 +606,6 @@
     </div>
                 <img id="I_3_Inmuebles" alt="" src="Master-Gestion-Inversiones-Patrimonios-Inmobiliarios-Online.jpg" style="z-index: 105; left: 1253px;
                     width: 160px; position: absolute; top: 5px; height: 84px" /></form>
-        &nbsp;
-        <img alt="" src="fondo-03-02.png" style="z-index: -1; left: -5px; width: 1438px;
-            position: absolute; top: -4px; height: 724px; margin-right: 0px; margin-bottom: 0px;" />
+        &nbsp;&nbsp;
 </body>
 </html>

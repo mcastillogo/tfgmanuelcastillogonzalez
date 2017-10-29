@@ -5,7 +5,15 @@ Partial Public Class _Default
     Public Tabla As String
     Public Campos(10), Valores(10) As String
 
+    Protected Sub Page_Load2(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        If Page.IsPostBack Then
 
+
+            If Not IsNothing(Panel_Mantenimientos) Then
+                'Panel_Mantenimientos.Visible = False
+            End If
+        End If
+    End Sub
 
     Protected Sub Menu2_MenuItemClick(ByVal sender As System.Object, ByVal e As System.Web.UI.WebControls.MenuEventArgs) Handles Menu2.MenuItemClick
 
@@ -132,7 +140,7 @@ Partial Public Class _Default
             Case "TipoDocumento"
                 Tabla = "dbo.tipo_documento"
             Case Else
-                Panel_Mantenimientos.Visible = False
+                'Panel_Mantenimientos.Visible = False
         End Select
         If Tabla <> "" Then
             '----------------------------------------------------------------`'
@@ -768,6 +776,7 @@ Partial Public Class _Default
     End Sub
 
     Private Sub Menu2_Load(sender As Object, e As EventArgs) Handles Menu2.Load
+
         If Session("TResponsable") = -1 Then
             Menu2.Items(3).Enabled = True
             Menu2.Items(4).Enabled = True
@@ -775,5 +784,13 @@ Partial Public Class _Default
             Menu2.Items(3).Enabled = False
             Menu2.Items(4).Enabled = False
         End If
+    End Sub
+
+    Protected Sub Menu2_MenuItemClick(sender As Object, e As EventArgs) Handles Menu2.DataBinding
+        'Panel_Mantenimientos.Visible = False
+    End Sub
+
+    Private Sub Panel_Mantenimientos_Load(sender As Object, e As EventArgs) Handles Panel_Mantenimientos.Load
+        'Panel_Mantenimientos.Visible = False
     End Sub
 End Class

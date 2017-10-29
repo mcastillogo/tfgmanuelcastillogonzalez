@@ -11,7 +11,8 @@
     <form id="form1" runat="server">
     <div>
         <div title="GESTACTIV - SELECCION INMUEBLES">
-        <img alt="" src="Master-Gestion-Inversiones-Patrimonios-Inmobiliarios-Online.jpg" style="z-index: 105; left: 1255px;
+        <img alt="" src="fondo-03-02.png" style="z-index: -1; left: 0px; width: 1439px;
+            position: absolute; top: 0px; height: 723px; margin-right: 0px; margin-bottom: 0px;" /><img alt="" src="Master-Gestion-Inversiones-Patrimonios-Inmobiliarios-Online.jpg" style="z-index: 105; left: 1255px;
             position: absolute; top: 9px; width: 166px; height: 82px;" /><img id="I_1_Inmuebles" alt="" src="logotipo-gestactiv.png" style="z-index: 108; left: 23px;
                 width: 118px; position: absolute; top: 16px; height: 87px; background-color: #FFFFFF;" />
         <img id="foto1" alt="" src="man-2546224_960_720.png" style="z-index: 106; left: 144px; width: 179px;
@@ -279,7 +280,6 @@
             Font-Names="Arial" Font-Size="Large" ForeColor="MidnightBlue" Height="24px" Style="z-index: 108;
             left: 872px; position: absolute; top: 72px" Text="Buscador Inmuebles" Width="168px"></asp:Label>
     </form>
-        <img alt="" src="fondo-03-02.png" style="z-index: -1; left: -5px; width: 1439px;
-            position: absolute; top: -3px; height: 723px; margin-right: 0px; margin-bottom: 0px;" />
+        &nbsp;
 </body>
 </html>

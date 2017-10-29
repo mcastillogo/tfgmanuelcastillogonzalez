@@ -44,13 +44,11 @@ Partial Public Class Inmuebles
 
         Cadena = "SELECT * FROM " & "dbo.Seleccion_Grupo"
         Texto = " WHERE "
-        If Session("TGrupos") = 0 Then
-            Cadena = Cadena & Texto & " USUARIO = " & "'" & Session("EntUsuario") & "'"
-            Texto = " AND "
-        End If
+        Cadena = Cadena & Texto & " USUARIO = " & "'" & Session("EntUsuario") & "'"
+
         If Trim(Buscar_Grupo.Text) <> "" Then
-            Cadena = Cadena & Texto & CAMPO0.Text & " LIKE '%" & Buscar_Grupo.Text & "%'"
             Texto = " AND "
+            Cadena = Cadena & Texto & CAMPO0.Text & " LIKE '%" & Buscar_Grupo.Text & "%'"
         End If
         dsx0.Clear()
         Dim dax0 As New SqlClient.SqlDataAdapter(Cadena, conexion)
@@ -70,19 +68,19 @@ Partial Public Class Inmuebles
         Session("Xdsx") = XDataSet
 
 
-        Cadena = "SELECT DISTINCT SOCIEDAD,DESCRIPCION_EMPRESA,CIF,TIPO_LOCALIDAD,TIPO_PROVINCIA,TIPO_PAIS,CPOSTAL FROM " & "dbo.Seleccion_Sociedad"
+        Cadena = "SELECT DISTINCT SOCIEDAD,DESCRIPCION_EMPRESA,CIF,TIPO_LOCALIDAD,TIPO_PROVINCIA,TIPO_PAIS,CPOSTAL FROM " & "dbo.Seleccion_Sociedad_Responsables"
         Texto = " WHERE "
-        If Session("TSociedades") = 0 Then
-            Cadena = Cadena & Texto & " USUARIO = " & "'" & Session("EntUsuario") & "'"
-            Texto = " AND "
-        End If
+        Cadena = Cadena & Texto & " USUARIO = " & "'" & Session("EntUsuario") & "'"
+
         If Trim(Buscar_Sociedad.Text) <> "" Then
+            Texto = " AND "
             Cadena = Cadena & Texto & CAMPO1.Text & " LIKE '%" & Buscar_Sociedad.Text & "%'"
-            Texto = " AND "
         End If
-        If Trim(Grupo_Sociedad) <> "" Then
-            Cadena = Cadena & Texto & " GRUPO_SOCIEDAD = " & Grupo_Sociedad
+
+        '0 Son todos luego no se prefija
+        If (Trim(Grupo_Sociedad) <> "") Then
             Texto = " AND "
+            Cadena = Cadena & Texto & " GRUPO_SOCIEDAD = '" & Grupo_Sociedad & "'"
         End If
 
         dsx1.Clear()
@@ -90,22 +88,9 @@ Partial Public Class Inmuebles
         dax1.Fill(dsx1, "dbo.Seleccion_Sociedad")
         Datos_Sociedades.DataSource = dsx1
         Datos_Sociedades.DataKeyField = dsx1.Tables(0).Columns(0).ColumnName
-
-
         Session("Xdax") = dax1
         Session("Xdsx")(1) = dsx1
         Datos_Sociedades.DataBind()
-
-        'Cargar esto con la sociedad----------------------------------------------------------'
-        If (Session("Filtro")(0) <> "") Then
-            If Datos_Sociedades.Items.Count <> 0 Then
-                Session("Filtro")(1) = Datos_Sociedades.Items(0).Cells(1).Text()
-            Else
-                Session("Filtro")(1) = "xxx"
-            End If
-        End If
-
-        '-------------------------------------------------------------------------------------'
         If Trim(CAMPO1.Text) = "" Then CAMPO1.Text = dsx1.Tables(0).Columns(0).ColumnName
     End Sub
 
@@ -113,21 +98,21 @@ Partial Public Class Inmuebles
         Dim dsx2 As New DataSet()
         'Usuarios----------------------------------------------------------------------------'
         Dim Cadena, Texto As String
+
         Session("Xdsx") = XDataSet
 
         Cadena = "SELECT DISTINCT TIPO_CENTRO,DESCRIPCION FROM " & "dbo.Seleccion_Centros"
         Texto = " WHERE "
-        If Session("TCentros") = 0 Then
-            Cadena = Cadena & Texto & " USUARIO = " & "'" & Session("EntUsuario") & "'"
-            Texto = " AND "
-        End If
+        Cadena = Cadena & Texto & " USUARIO = " & "'" & Session("EntUsuario") & "'"
+
+
         If Trim(Buscar_Centro.Text) <> "" Then
+            Texto = " AND "
             Cadena = Cadena & Texto & CAMPO2.Text & " LIKE '%" & Buscar_Centro.Text & "%'"
-            Texto = " AND "
         End If
-        If Trim(Sociedad) <> "" Then
-            Cadena = Cadena & Texto & " SOCIEDAD = '" & Sociedad & "'"
+        If (Session("Filtro")(0) <> "") Or (Session("Filtro")(1) <> "") Then
             Texto = " AND "
+            Cadena = Cadena & Texto & " SOCIEDAD = '" & Sociedad & "'"
         End If
 
         dsx2.Clear()
@@ -148,11 +133,11 @@ Partial Public Class Inmuebles
 
 
         Cadena = " SELECT * FROM " & "dbo.Tipo_Grupo_Interno "
-        Texto = " WHERE "
-        If Trim(Buscar_Grupo_Interno.Text) <> "" Then
+        If Buscar_Grupo_Interno.Text <> "" Then
+            Texto = " WHERE "
             Cadena = Cadena & Texto & CAMPO3.Text & " LIKE '%" & Buscar_Grupo_Interno.Text & "%'"
-            Texto = " AND "
         End If
+
 
         dsx3.Clear()
         Dim dax3 As New SqlClient.SqlDataAdapter(Cadena, conexion)
@@ -174,26 +159,26 @@ Partial Public Class Inmuebles
 
         Cadena = "SELECT DISTINCT SOCIEDAD,CODIGO,TIPO_ELEMENTO,CENTRO,DESCRIPCION_CORTA [6_DESCRIPCION_CORTA],UBICACION [2_UBICACION],TIPO_PROVINCIA [2_TIPO_PROVINCIA] FROM " & "dbo.Seleccion_Elementos_New"
         Texto = " WHERE "
-        ''''Cadena = Cadena & " WHERE USUARIO = " & "'" & Session("EntUsuario") & "'"
+        Cadena = Cadena & Texto & " USUARIO = " & "'" & Session("EntUsuario") & "'"
         If Trim(Buscar_Inmuebles.Text) <> "" Then
+            Texto = " AND "
             Cadena = Cadena & Texto & " [" & CAMPO4.Text & "] LIKE '%" & Buscar_Inmuebles.Text & "%'"
-            Texto = " AND "
         End If
-        If Trim(XFiltro(0)) <> "" Then
-            Cadena = Cadena & Texto & " TIPO_GRUPO_SOCIEDAD = '" & XFiltro(0) & "'"
+        If (Trim(XFiltro(0)) <> "") Then
             Texto = " AND "
+            Cadena = Cadena & Texto & " TIPO_GRUPO_SOCIEDAD = '" & XFiltro(0) & "'"
         End If
         If Trim(XFiltro(1)) <> "" Then
-            Cadena = Cadena & Texto & " SOCIEDAD = '" & XFiltro(1) & "'"
             Texto = " AND "
+            Cadena = Cadena & Texto & " SOCIEDAD = '" & XFiltro(1) & "'"
         End If
         If Trim(XFiltro(2)) <> "" Then
-            Cadena = Cadena & Texto & " CENTRO = '" & XFiltro(2) & "'"
             Texto = " AND "
+            Cadena = Cadena & Texto & " CENTRO = '" & XFiltro(2) & "'"
         End If
         If Trim(XFiltro(3)) <> "" Then
-            Cadena = Cadena & Texto & " TIPO_GRUPO_INTERNO = '" & XFiltro(3) & "'"
             Texto = " AND "
+            Cadena = Cadena & Texto & " TIPO_GRUPO_INTERNO = '" & XFiltro(3) & "'"
         End If
         dsx4.Clear()
 
@@ -254,86 +239,53 @@ Partial Public Class Inmuebles
 
     Protected Sub Datos_Grupo_ItemCommand(ByVal source As System.Object, ByVal e As System.Web.UI.WebControls.DataGridCommandEventArgs) Handles Datos_Grupo.ItemCommand
         Pinchar_Cabecera(source, e)
+        Datos_Sociedades.SelectedIndex = -1
+        Datos_Centro.SelectedIndex = -1
         Try
             If (source.selectedindex = e.Item.ItemIndex) Or (Trim(source.Datakeys(e.Item.ItemIndex)) = 0) Then
                 source.selectedindex = -1
                 Session("Filtro")(0) = ""
-                Actualiza_DataSet_1("")
-
-                'Prueba--------------------------------------------------------------------------------
                 Session("Filtro")(1) = ""
-
-                Datos_Sociedades.SelectedIndex = -1
-                Datos_Centro.SelectedIndex = -1
-                If Datos_Sociedades.Items.Count <> 0 Then
-                    Actualiza_DataSet_2(Session("Filtro")(1))
-                End If
                 Session("Filtro")(2) = ""
-                '--------------------------------------------------------------------------------------
+                Session("Filtro")(3) = ""
             Else
                 source.selectedindex = e.Item.ItemIndex
                 If e.Item.ItemIndex <> -1 Then
                     Session("Filtro")(0) = source.Datakeys(e.Item.ItemIndex)
-
-                    Actualiza_DataSet_1(source.Datakeys(e.Item.ItemIndex))
-      
-
-                    'Prueba--------------------------------------------------------------------------------
-                    Datos_Sociedades.SelectedIndex = 0
-                    If Datos_Sociedades.Items.Count <> 0 Then
-                        Actualiza_DataSet_2(Session("Filtro")(1))
-                    Else
-                        Actualiza_DataSet_2("xxx")
-                    End If
-                    '--------------------------------------------------------------------------------------
+                    Session("Filtro")(1) = ""
+                    Session("Filtro")(2) = ""
+                    Session("Filtro")(3) = ""
                 End If
             End If
         Catch
-            source.selectedindex = -1
-            Actualiza_DataSet_1("")
-            Session("Filtro")(0) = ""
-            'Prueba--------------------------------------------------------------------------------
-            Session("Filtro")(1) = ""
-            Datos_Sociedades.SelectedIndex = -1
-            If Datos_Sociedades.Items.Count <> 0 Then
-                Actualiza_DataSet_2(Session("Filtro")(1))
-            Else
-                Actualiza_DataSet_2("xxx")
-            End If
-            '--------------------------------------------------------------------------------------
         End Try
-
-
-
-        Actualiza_DataSet_4(Session("Filtro"))
         Session("XStatus") = ""
-
+        Datos_Inmuebles.CurrentPageIndex = 0
+        Actualiza_DataSet()
     End Sub
 
     Protected Sub Datos_Sociedades_ItemCommand(ByVal source As System.Object, ByVal e As System.Web.UI.WebControls.DataGridCommandEventArgs) Handles Datos_Sociedades.ItemCommand
         Pinchar_Cabecera(source, e)
+        Datos_Centro.SelectedIndex = -1
         Try
             If (source.selectedindex = e.Item.ItemIndex) Or (Trim(source.Datakeys(e.Item.ItemIndex)) = "TODAS") Then
                 source.selectedindex = -1
-                Datos_Centro.SelectedIndex = -1
-                Session("Filtro")(0) = ""
                 Session("Filtro")(1) = ""
                 Session("Filtro")(2) = ""
-                Actualiza_DataSet_2("")
+                Session("Filtro")(3) = ""
             Else
                 source.selectedindex = e.Item.ItemIndex
                 If e.Item.ItemIndex <> -1 Then
                     Session("Filtro")(1) = source.Datakeys(e.Item.ItemIndex)
-                    Actualiza_DataSet_2(source.Datakeys(e.Item.ItemIndex))
+                    Session("Filtro")(2) = ""
+                    Session("Filtro")(3) = ""
                 End If
             End If
         Catch
-            Session("Filtro")(0) = ""
-            source.selectedindex = -1
-            Actualiza_DataSet_2("")
         End Try
-        Actualiza_DataSet_4(Session("Filtro"))
         Session("XStatus") = ""
+        Datos_Inmuebles.CurrentPageIndex = 0
+        Actualiza_DataSet()
     End Sub
 
     Protected Sub Datos_Grupo_Interno_ItemCommand(ByVal source As System.Object, ByVal e As System.Web.UI.WebControls.DataGridCommandEventArgs) Handles Datos_Grupo_Interno.ItemCommand
@@ -344,17 +296,15 @@ Partial Public Class Inmuebles
                 Session("Filtro")(3) = ""
             Else
                 source.selectedindex = e.Item.ItemIndex
-                Session("Filtro")(3) = source.Datakeys(e.Item.ItemIndex)
+                If e.Item.ItemIndex <> -1 Then
+                    Session("Filtro")(3) = source.Datakeys(e.Item.ItemIndex)
+                End If
             End If
         Catch
-            source.selectedindex = -1
-            Session("Filtro")(3) = ""
         End Try
         Session("XStatus") = ""
         Datos_Inmuebles.CurrentPageIndex = 0
-        Actualiza_DataSet_4(Session("Filtro"))
-
-        'Actualiza_DataSet_1(source.Datakeys(e.Item.ItemIndex))
+        Actualiza_DataSet()
     End Sub
 
     Protected Sub Datos_Inmuebles_ItemCommand(ByVal source As System.Object, ByVal e As System.Web.UI.WebControls.DataGridCommandEventArgs) Handles Datos_Inmuebles.ItemCommand
@@ -412,16 +362,19 @@ Partial Public Class Inmuebles
             If (source.selectedindex = e.Item.ItemIndex) Or (Trim(source.Datakeys(e.Item.ItemIndex)) = "TODOS") Then
                 source.selectedindex = -1
                 Session("Filtro")(2) = ""
+                Session("Filtro")(3) = ""
             Else
                 source.selectedindex = e.Item.ItemIndex
-                Session("Filtro")(2) = source.Datakeys(e.Item.ItemIndex)
+                If e.Item.ItemIndex <> -1 Then
+                    Session("Filtro")(2) = source.Datakeys(e.Item.ItemIndex)
+                    Session("Filtro")(3) = ""
+                End If
             End If
         Catch
-            source.selectedindex = -1
-            Session("Filtro")(2) = ""
         End Try
         Session("XStatus") = ""
-        Actualiza_DataSet_4(Session("Filtro"))
+        Datos_Inmuebles.CurrentPageIndex = 0
+        Actualiza_DataSet()
     End Sub
 
     Protected Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
@@ -485,6 +438,10 @@ Partial Public Class Inmuebles
     End Sub
 
     Protected Sub Datos_Grupo_ItemCreated1(ByVal sender As System.Object, ByVal e As System.Web.UI.WebControls.DataGridItemEventArgs)
+
+    End Sub
+
+    Protected Sub Datos_Grupo_SelectedIndexChanged1(sender As Object, e As EventArgs) Handles Datos_Grupo.SelectedIndexChanged
 
     End Sub
 

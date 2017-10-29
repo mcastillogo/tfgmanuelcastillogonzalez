@@ -36,7 +36,8 @@
         <asp:Button ID="B_1_Seguridad" runat="server" Style="left: 1257px; position: absolute;
             top: 94px" Text="Página Anterior" Width="168px" />
         <img id="I_3_Agrupaciones" alt="" src="Master-Gestion-Inversiones-Patrimonios-Inmobiliarios-Online.jpg" style="z-index: 105; left: 1256px;
-            width: 166px; position: absolute; top: 5px; height: 84px" /><asp:Panel ID="P_1_Seguridad" runat="server" BackColor="#E0E0E0" BorderColor="RoyalBlue"
+            width: 166px; position: absolute; top: 5px; height: 84px" /><img alt="" src="fondo-03-02.png" style="z-index: -1; left: -5px; width: 1439px;
+            position: absolute; top: -3px; height: 723px; margin-right: 0px; margin-bottom: 0px;" /><asp:Panel ID="P_1_Seguridad" runat="server" BackColor="#E0E0E0" BorderColor="RoyalBlue"
             BorderStyle="Inset" Font-Names="Arial" Font-Size="Small" ForeColor="RoyalBlue"
             Height="500px" Style="z-index: 102; left: 16px; position: relative; top: 88px"
             Width="1200px">
@@ -84,14 +85,14 @@
                     <asp:TemplateColumn HeaderText="TIPO" SortExpression="TIPO_RESPONSABLE">
                         <EditItemTemplate>
                             <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="Sql2"
-                                DataTextField="DESCRIPCION" DataValueField="TIPO_RESPONSABLE" SelectedValue='<%# DataBinder.Eval(Container.DataItem,"TIPO_RESPONSABLE") %>'
+                                DataTextField="DESCRIPCION" DataValueField="TIPO_RESPONSABLE" SelectedValue='<%# DataBinder.Eval(Container.DataItem, "TIPO_RESPONSABLE") %>'
                                 Style="position: relative" Font-Size="X-Small">
                             </asp:DropDownList>&nbsp;
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="Sql2"
                                 DataTextField="DESCRIPCION" DataValueField="TIPO_RESPONSABLE" Enabled="False"
-                                Font-Names="arial,x-small" SelectedValue='<%# DataBinder.Eval(Container.DataItem,"TIPO_RESPONSABLE") %>'
+                                Font-Names="arial,x-small" SelectedValue='<%# DataBinder.Eval(Container.DataItem, "TIPO_RESPONSABLE") %>'
                                 Style="position: relative" Font-Size="X-Small">
                             </asp:DropDownList>&nbsp;
                         </ItemTemplate>
@@ -136,14 +137,14 @@
                         <EditItemTemplate>
                             <asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="True" AutoPostBack="True"
                                 DataSourceID="Sql1" DataTextField="DESCRIPCION" DataValueField="TIPO_GRUPO_SOCIEDAD"
-                                Font-Names="arial,x-small" SelectedValue='<%# DataBinder.Eval(Container.DataItem,"TIPO_GRUPO_SOCIEDAD") %>'
+                                Font-Names="arial,x-small" SelectedValue='<%# DataBinder.Eval(Container.DataItem, "TIPO_GRUPO_SOCIEDAD") %>'
                                 Style="left: -6px; position: relative; top: 0px" Font-Size="X-Small" Width="152px">
                             </asp:DropDownList>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="True" AutoPostBack="True"
                                 DataSourceID="Sql1" DataTextField="DESCRIPCION" DataValueField="TIPO_GRUPO_SOCIEDAD"
-                                Enabled="False" Font-Names="Arial" SelectedValue='<%# DataBinder.Eval(Container.DataItem,"TIPO_GRUPO_SOCIEDAD") %>'
+                                Enabled="False" Font-Names="Arial" SelectedValue='<%# DataBinder.Eval(Container.DataItem, "TIPO_GRUPO_SOCIEDAD") %>'
                                 Style="left: -6px; position: relative; top: 0px" OnTextChanged="DropDownList1_TextChanged" Font-Size="X-Small" Width="152px">
                             </asp:DropDownList>&nbsp;&nbsp;
                         </ItemTemplate>
@@ -202,14 +203,14 @@
                         <asp:TemplateColumn HeaderText="SOCIEDAD">
                             <EditItemTemplate>
                                 &nbsp;<asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="True" AutoPostBack="True"
-                                DataSourceID="Sql3" DataTextField="DESCRIPCION_EMPRESA" DataValueField="SOCIEDAD" Font-Names="arial,x-small" SelectedValue='<%# DataBinder.Eval(Container.DataItem,"SOCIEDAD") %>'
+                                DataSourceID="Sql3" DataTextField="DESCRIPCION_EMPRESA" DataValueField="SOCIEDAD" Font-Names="arial,x-small" SelectedValue='<%# DataBinder.Eval(Container.DataItem, "SOCIEDAD") %>'
                                 Style="left: -6px; position: relative; top: 0px" Font-Size="X-Small">
                                 </asp:DropDownList>
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="True" AutoPostBack="True"
                                 DataSourceID="Sql3" DataTextField="DESCRIPCION_EMPRESA" DataValueField="SOCIEDAD"
-                                Enabled="False" Font-Names="arial,x-small" SelectedValue='<%# DataBinder.Eval(Container.DataItem,"SOCIEDAD") %>'
+                                Enabled="False" Font-Names="arial,x-small" SelectedValue='<%# DataBinder.Eval(Container.DataItem, "SOCIEDAD") %>'
                                 Style="left: -6px; position: relative; top: 0px" OnTextChanged="DropDownList1_TextChanged" Font-Size="X-Small">
                                 </asp:DropDownList>&nbsp;&nbsp;
                             </ItemTemplate>
@@ -251,14 +252,14 @@
                         <asp:TemplateColumn HeaderText="CENTRO">
                             <EditItemTemplate>
                                 &nbsp;<asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="True" AutoPostBack="True"
-                                DataSourceID="Sql4" DataTextField="DESCRIPCION" DataValueField="TIPO_CENTRO" Font-Names="arial,x-small" SelectedValue='<%# DataBinder.Eval(Container.DataItem,"CENTRO") %>'
+                                DataSourceID="Sql4" DataTextField="DESCRIPCION" DataValueField="TIPO_CENTRO" Font-Names="arial,x-small" SelectedValue='<%# DataBinder.Eval(Container.DataItem, "CENTRO") %>'
                                 Style="left: -6px; position: relative; top: 0px" Font-Size="X-Small">
                                 </asp:DropDownList>
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="True" AutoPostBack="True"
                                 DataSourceID="Sql4" DataTextField="DESCRIPCION" DataValueField="TIPO_CENTRO"
-                                Enabled="False" Font-Names="arial,x-small" SelectedValue='<%# DataBinder.Eval(Container.DataItem,"CENTRO") %>'
+                                Enabled="False" Font-Names="arial,x-small" SelectedValue='<%# DataBinder.Eval(Container.DataItem, "CENTRO") %>'
                                 Style="left: -6px; position: relative; top: 0px" Font-Size="X-Small">
                                 </asp:DropDownList>&nbsp;&nbsp;
                             </ItemTemplate>
@@ -295,8 +296,6 @@
             left: 872px; position: absolute; top: 72px" Text="Seguridad" Width="168px"></asp:Label>
         </div>
     </form>
-        &nbsp;
-        <img alt="" src="fondo-03-02.png" style="z-index: -1; left: -4px; width: 1439px;
-            position: absolute; top: -3px; height: 723px; margin-right: 0px; margin-bottom: 0px;" />
+        &nbsp;&nbsp;
 </body>
 </html>

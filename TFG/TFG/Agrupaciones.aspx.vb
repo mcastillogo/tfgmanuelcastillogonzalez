@@ -107,6 +107,7 @@ Public Partial Class Agrupaciones
 
     Sub Actualiza_DataSet_5(ByVal Asociar_Datos_Responsable As Integer)
         Dim dsx5 As New DataSet()
+        Datos_TipoDato.CurrentPageIndex = 0
 
         'Usuarios-Grupo----------------------------------------------------------------------'
         Cadena = "SELECT * FROM dbo.ASOCIAR_DATOS_RESPONSABLE WHERE CODIGO_RESPONSABLE = " & "'" & Asociar_Datos_Responsable & "'"
@@ -500,7 +501,7 @@ Public Partial Class Agrupaciones
             Dr = Session("Xdsx")(1).Tables(0).NewRow
             Dr.Item("SOCIEDAD") = Datos_Sociedades.Items(Datos_Sociedades.SelectedIndex).Cells(1).Text
             Session("Xdsx")(1).Tables(0).Rows.Add(Dr)
-            Dr.Item("CENTRO") = "TODOS     "
+            Dr.Item("CENTRO") = "D00001    "
 
             'Posicionamiento--------------------------------------------------------------------'
             Registros = Session("Xdsx")(1).Tables(0).Rows.Count() - 1
@@ -685,7 +686,7 @@ Public Partial Class Agrupaciones
             Dr = Session("Xdsx")(3).Tables(0).NewRow
             Dr.Item("GRUPO_SOCIEDAD") = Datos_Grupo.Items(Datos_Grupo.SelectedIndex).Cells(1).Text
             Session("Xdsx")(3).Tables(0).Rows.Add(Dr)
-            Dr.Item("SOCIEDAD") = "TODAS     "
+            Dr.Item("SOCIEDAD") = "000001    "
             'Posicionamiento--------------------------------------------------------------------'
             Registros = Session("Xdsx")(3).Tables(0).Rows.Count() - 1
             If Registros - (Datos_Grupo_Sociedades.PageCount * 2) = 0 Then
@@ -915,7 +916,7 @@ Public Partial Class Agrupaciones
 
     Protected Sub D1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Session("XSociedadX") = sender.text
-        CType(sender.FindControl("D2"), DropDownList).DataBind()
+        'CType(sender.FindControl("D2"), DropDownList).DataBind()
     End Sub
 
 
@@ -1246,6 +1247,10 @@ Public Partial Class Agrupaciones
 
     Protected Sub Datos_Elemento_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Datos_Elemento.Load
         sender.Columns.Item(2).Visible = False
+    End Sub
+
+    Protected Sub Datos_Localidad_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Datos_Localidad.SelectedIndexChanged
+
     End Sub
 
     Protected Sub Datos_Grupo_Sociedades_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Datos_Grupo_Sociedades.Load

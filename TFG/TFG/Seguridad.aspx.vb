@@ -522,7 +522,12 @@ Partial Public Class Seguridad
             Dr = Session("Xdsx")(2).Tables(0).NewRow
             Dr.Item("CODIGO_RESPONSABLE") = CType(Datos_Usuarios.Items(Datos_Usuarios.SelectedIndex).Cells(3).Text, Int16)
             Session("Xdsx")(2).Tables(0).Rows.Add(Dr)
-            Dr.Item("SOCIEDAD") = "TODAS     "
+            Dr.Item("SOCIEDAD") = "000001    "
+
+
+
+
+
             'Posicionamiento--------------------------------------------------------------------'
             Registros = Session("Xdsx")(2).Tables(0).Rows.Count() - 1
             If Registros - (Datos_Usuarios_Sociedades.PageCount * 2) = 0 Then
@@ -537,6 +542,7 @@ Partial Public Class Seguridad
             Else
                 Datos_Usuarios_Sociedades.EditItemIndex = Registros - ((Datos_Usuarios_Sociedades.PageCount * 2))
             End If
+
             'Posicionamiento--------------------------------------------------------------------'
             Datos_Usuarios_Sociedades.DataBind()
         End If
@@ -629,7 +635,7 @@ Partial Public Class Seguridad
             Dr = Session("Xdsx")(3).Tables(0).NewRow
             Dr.Item("CODIGO_RESPONSABLE") = CType(Datos_Usuarios.Items(Datos_Usuarios.SelectedIndex).Cells(3).Text, Int16)
             Session("Xdsx")(3).Tables(0).Rows.Add(Dr)
-            Dr.Item("CENTRO") = "TODOS     "
+            Dr.Item("CENTRO") = "D00001    "
             'Posicionamiento--------------------------------------------------------------------'
             Registros = Session("Xdsx")(3).Tables(0).Rows.Count() - 1
             If Registros - (Datos_Usuarios_Centro.PageCount * 2) = 0 Then
@@ -644,6 +650,7 @@ Partial Public Class Seguridad
             Else
                 Datos_Usuarios_Centro.EditItemIndex = Registros - ((Datos_Usuarios_Centro.PageCount * 2))
             End If
+
             'Posicionamiento--------------------------------------------------------------------'
             Datos_Usuarios_Centro.DataBind()
         End If
